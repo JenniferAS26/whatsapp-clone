@@ -1,7 +1,7 @@
 # whatsapp-clone
 
 ## Requerimientos técnicos del aplicativo
-1. Implementar CSS para aplicar estilos y diseño responsive. El uso de SASS como preprocesador CSS duplica el porcentaje del item sobre la calificación del proyecto
+#### 1. Implementar CSS para aplicar estilos y diseño responsive. El uso de SASS como preprocesador CSS duplica el porcentaje del item sobre la calificación del proyecto
 
 #### 2. Imprementar JSON-server que contenga la siguiente información:
   &nbsp;&nbsp;a.  Usuarios <br>
