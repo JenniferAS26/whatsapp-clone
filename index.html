@@ -4,23 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WhatsApp Clone</title>
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
   <div class="wrapper">
     <section class="signin-container">
-      <form class="signin-container__form">
-        <input type="text" name="" id="" class="signin-container__form--input">
-        <div class="signin-container__form--wrapper div-inside">
-          <h1 class="div-inside__title"></h1>
+      <div class="signin-container__welcome-container">
+        <h1 class="signin-container__welcome-container--title">Welcome to WhatsApp</h1>
+        <div class="signin-container__welcome-container--image-container"></div>
+        <p class="signin-container__welcome-container--text">Read our <span>Privacy Policy</span>. Tap "Agree and continue" to accept the <span>Terms of Service</span>.</p>
+        <button class="signin-container__welcome-container--button agree-continue">Agree and continue</button>
+        <div class="signin-container__welcome-container--brand-container">
+          <p class="text">from</p>
+          <p class="brand">FACEBOOK</p>
         </div>
-      </form>
+      </div>
+      <div class="signin-container__auth-container">
+        <h2 class="signin-container__auth-container--title">Enter your phone number</h2>
+        <form class="signin-container__auth-container--form form">
+          <div class="form__input-wrapper">
+            <input class="form__input" type="number" placeholder="Enter your phone number">
+            <div class="form__input--error error"></div>
+            <input class="form__input" type="password" placeholder="Enter your password">
+            <div class="form__input--error error"></div>
+          </div>
+          <button class="form__button">next</button>
+        </form>
+      </div>
     </section>
     <section class="home-container"></section>
     <section class="-container"></section>
     <section class="-container"></section>
-    <section class="modal-container"></section>
 
   </div>
+
+  <script src="./src/scripts/navigation.js"></script>
 </body>
 </html>

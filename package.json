@@ -1,0 +1,24 @@
+{
+  "name": "whatsapp-clone",
+  "version": "1.0.0",
+  "description": "WhatsApp clone SPA, usando SASS como preprocesador de CSS, JavaScript, HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JenniferAS26/whatsapp-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JenniferAS26/whatsapp-clone/issues"
+  },
+  "homepage": "https://github.com/JenniferAS26/whatsapp-clone#readme",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
