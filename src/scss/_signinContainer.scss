@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 .signin-container {
-  @include containerStyle;
+  @include containerStyle(100%, 100%, 40px, 25px);
   &__welcome-container {
     width: 100%;
     height: 100%;
@@ -48,6 +48,7 @@
       }
       .brand {
         font-size: 2rem;
+        font-weight: $bold-weight;
         letter-spacing: 2px;
       }
     }
@@ -90,5 +91,11 @@
         align-self: flex-end;
       }
     }
+  }
+}
+
+input[type="number"] {
+  &:focus::-webkit-inner-spin-button, &:hover::-webkit-inner-spin-button {
+    display: none; /* para retirar el scroll */
   }
 }

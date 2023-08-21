@@ -1,9 +1,16 @@
 @use 'variables' as *;
 
-@mixin containerStyle {
-  width: 100%;
-  height: 100%;
-  padding: 40px 25px;
+@mixin flexCenter($direction, $content, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $align;
+}
+
+@mixin containerStyle($width, $height, $top-bottom, $right-left) {
+  width: $width;
+  height: $height;
+  padding: $top-bottom $right-left;
 }
 
 @mixin titleStyle($f-s, $text-align, $letter-spc, $color) {
