@@ -4,7 +4,7 @@
   "description": "WhatsApp clone SPA, usando SASS como preprocesador de CSS, JavaScript, HTML",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "json-server ./src/data/db.json --host 0.0.0.0 --port 3001"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "devDependencies": {
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "json-server": "^0.17.3"
   }
 }
