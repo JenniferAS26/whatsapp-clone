@@ -5,10 +5,7 @@
   display: none;
   @include containerStyle(100%, 100%, 0, 0);
   &__header {
-    width: 100%;
-    height: 120px;
-    background-color: $secondary-color;
-    display: grid;
+    @include headerContainer(120px, grid);
     &--top {
       @include containerStyle(100%, 100%, 15px, 20px);
       @include flexCenter(row, space-between, center);
