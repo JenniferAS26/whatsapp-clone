@@ -1,0 +1,1 @@
+const BASE_URL = 'https://whatsapp-clone-sprint-db.up.railway.app/'

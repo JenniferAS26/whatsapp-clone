@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Kate Pierse",
+      "cellphone-number": 3256984565,
+      "password": 147856,
+      "url-image": "",
+      "online": true,
+      "quote": "",
+      "date": ""
+    }
+  ],
+  "messages": [
+    {
+      "idUser1": "user1",
+      "idUser2": "user2",
+      "chats": [
+        {
+          "sendBy": "idUser1",
+          "date": "",
+          "hour": "",
+          "message": "fsddfeff",
+          "view": false
+        }
+      ]
+    }
+  ]
+}
