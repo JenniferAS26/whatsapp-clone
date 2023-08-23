@@ -30,6 +30,10 @@
           </div>
           <button class="form__button">next</button>
         </form>
+        <span class="signup-redirect">Sign up for free</span>
+      </div>
+      <div class="signin-container__signup-container">
+        <h1>pending...</h1>
       </div>
     
     </section>
@@ -43,7 +47,7 @@
           </div>
         </div>
         <div class="home-container__header--bottom home-header">
-          <img class="home-header__image" src="./src/assets/icons/camera.png" alt="camera icon">
+          <img class="home-header__image camera-icon" src="./src/assets/icons/camera.png" alt="camera icon">
           <div class="home-header__options-container">
             <button class="home-header__options-container--option chats">CHATS</button>
             <button class="home-header__options-container--option status">STATUS</button>
@@ -125,7 +129,7 @@
           </div>
         </div>
         <div class="status-container__header--bottom status-header">
-          <img class="status-header__image" src="./src/assets/icons/camera.png" alt="camera icon">
+          <img class="status-header__image camera-icon" src="./src/assets/icons/camera.png" alt="camera icon">
           <div class="status-header__options-container">
             <button class="status-header__options-container--option chats">CHATS</button>
             <button class="status-header__options-container--option status">STATUS</button>
@@ -226,7 +230,7 @@
           </div>
         </div>
         <div class="calls-container__header--bottom calls-header">
-          <img class="calls-header__image" src="./src/assets/icons/camera.png" alt="camera icon">
+          <img class="calls-header__image camera-icon" src="./src/assets/icons/camera.png" alt="camera icon">
           <div class="calls-header__options-container">
             <button class="calls-header__options-container--option chats">CHATS</button>
             <button class="calls-header__options-container--option status">STATUS</button>
@@ -352,10 +356,191 @@
         </button>
       </div>
     </section>
+    <section class="chats-container">
+      <div class="chats-container__header">
+        <div class="chats-container__header--left">
+          <img class="arrow-back" src="./src/assets/icons/back-grey.png" alt="arrow icon">
+          <div class="contact-info">
+            <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+            <p class="username">Jane Doe</p>
+          </div>
+        </div>
+        <div class="chats-container__header--right">
+          <img src="./src/assets/icons/video-camera-white.png" alt="video camera icon">
+          <img src="./src/assets/icons/phone-white.png" alt="telephone icon">
+          <img class="chat-menu-icon" src="./src/assets/icons/menu-vertical.png" alt="menu icon">
+        </div>
+      </div>
+      <div class="chats-container__main">
+        <div class="chats-container__main--wallpaper-container"></div>
+        <div class="chats-container__main--bottom-container">
+          <div class="emojis">
+            <img class="smiley-face" src="./src/assets/icons/smiley-face.png" alt="smiley-face icon">
+          </div>
+          <input class="input" type="text" placeholder="Type a message">
+          <div class="icons">
+            <img class="clip-icon" src="./src/assets/icons/clip.png" alt="clip icon">
+            <img class="camera-icon" src="./src/assets/icons/camera.png" alt="camera icon">
+          </div>
+          <img class="microphone-icon" src="./src/assets/icons/voice-note.png" alt="microphone icon">
+        </div>
+      </div>
+    </section>
+    <section class="take-a-picture-container">
+      <div class="take-a-picture-container__top">
+        <button class="close-picture">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="video-counter">
+          <span>00:00</span>
+        </div>
+        <img class="flash-icon" src="./src/assets/icons/non-flash.png" alt="flash icon">
+      </div>
+      <div class="take-a-picture-container__gallery">
+        <img src="./src/assets/images/image1.jpg" alt="">
+        <img src="./src/assets/images/image2.jpg" alt="">
+        <img src="./src/assets/images/image3.jpg" alt="">
+        <img src="./src/assets/images/image4.jpg" alt="">
+        <img src="./src/assets/images/image5.jpg" alt="">
+        <img src="./src/assets/images/image6.jpg" alt="">
+      </div>
+      <div class="take-a-picture-container__tools">
+        <div class="photo-icon-container">
+          <i class="fa-regular fa-image"></i>
+        </div>
+        <button class="take-photo">
+          <div></div>
+        </button>
+        <div class="selfie-icon-container">
+          <img src="./src/assets/icons/selfie.png" alt="change camera icon">
+        </div>
+      </div>
+      <div class="take-a-picture-container__choose-option">
+        <button class="take-video-option">Video</button>
+        <button class="take-foto-option">Photo</button>
+      </div>
+    </section>
+    <section class="send-picture-container">
+      <div class="send-picture-container__top">
+        <button class="close-picture">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="right">
+          <button>
+            <i class="fa-solid fa-crop"></i>
+          </button>
+          <button>
+            <i class="fa-regular fa-note-sticky"></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-t"></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-pencil"></i>
+          </button>
+        </div>
+      </div>
+      <div class="send-picture-container__choose-option">
+        <div class="name-wrapper">
+          <p>Jane Doe</p>
+        </div>
+        <img class="send-icon" src="./src/assets/icons/send.png" alt="send icon">
+      </div>
+    </section>
+    <section class="contact-info-container">
+      <div class="contact-info-container__top">
+        <img class="arrow-back-icon" src="./src/assets/icons/back.png" alt="back arrow icon">
+        <div class="contact-info-container__top--info contact">
+          <img class="contact__photo" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+          <h3 class="contact__name">Jane Doe</h3>
+          <span class="contact__number">+57 315 1234569</span>
+          <div class="contact__actions">
+            <div class="contact__actions--options">
+              <button>
+                <i class="fa-solid fa-phone"></i>
+              </button>
+              <span>Audio</span>
+            </div>
+            <div class="contact__actions--options">
+              <button>
+                <i class="fa-solid fa-video"></i>
+              </button>
+              <span>Video</span>
+            </div>
+            <div class="contact__actions--options">
+              <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <span>Search</span>
+            </div>
+          </div>
+        </div>
+        <img class="contact-menu-icon" src="./src/assets/icons/menu-vertical.png" alt="menu icon">
+      </div>
+      <div class="contact-info-container__media-links-docs">
+        <div class="contact-info-container__media-links-docs--top">
+          <p>Media, links, and docs</p>
+          <div>
+            <span>8.215</span>
+            <button>
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="contact-info-container__media-links-docs--carousel">
+          <img src="./src/assets/images/image1.jpg" alt="carousel images">
+          <img src="./src/assets/images/image2.jpg" alt="carousel images">
+          <img src="./src/assets/images/image3.jpg" alt="carousel images">
+          <img src="./src/assets/images/image4.jpg" alt="carousel images">
+        </div>
+      </div>
+      <div class="contact-info-container__notifications">
+        <div class="contact-info-container__notifications--items">
+          <i class="fa-solid fa-bell"></i>
+          <span>Mute notifications</span>
+        </div>
+        <div class="contact-info-container__notifications--items">
+          <i class="fa-solid fa-fire"></i>
+          <span>Custom notifications</span>
+        </div>
+        <div class="contact-info-container__notifications--items">
+          <i class="fa-regular fa-image"></i>
+          <span>Media visibility</span>
+        </div>
+        <div class="contact-info-container__notifications--items">
+          <i class="fa-solid fa-star"></i>
+          <span>Starred messages</span>
+        </div>
+      </div>
+      <div class="contact-info-container__encryption">
+        <div class="contact-info-container__encryption--items">
+          <i class="fa-solid fa-lock"></i>
+          <div class="description-wrapper">
+            <p>Encryption</p>
+            <span>Messages and calls are end-to-end encrypted.</span>
+            <span>Tap to verify</span>
+          </div>
+        </div>
+        <div class="contact-info-container__encryption--items">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <div class="description-wrapper">
+            <p>Disappearing messages</p>
+            <span>Off</span>
+          </div>
+        </div>
+        <div class="contact-info-container__encryption--items">
+          <i class="fa-solid fa-lock-open"></i>
+          <div class="description-wrapper">
+            <p>Chat lock</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </div>
 
   <script src="./src/scripts/navigation.js"></script>
+  <script src="https://kit.fontawesome.com/4825aba800.js" crossorigin="anonymous"></script>
 </body>
 </html>
 
