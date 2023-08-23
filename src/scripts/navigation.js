@@ -2,6 +2,7 @@
 const signinContainer = document.querySelector('.signin-container')
 const welcomeContainerInsideSinginContainer = document.querySelector('.signin-container__welcome-container')
 const authenticationContainerInsideSigninContainer = document.querySelector('.signin-container__auth-container')
+const singupContainerInsideSigninContainer = document.querySelector('.signin-container__signup-container')
 const homeContainer = document.querySelector('.home-container')
 const statusContainer = document.querySelector('.status-container')
 const callsContainer = document.querySelector('.calls-container')
@@ -11,6 +12,7 @@ const sendPictureContainer = document.querySelector('.send-picture-container')
 const contactInfoContainer = document.querySelector('.contact-info-container')
 
  /** Other elements */
+const singupRedirect = document.querySelector('.signup-redirect')
 const cardChat = document.querySelectorAll('.card')
 const videoRecordCounter = document.querySelector('.video-counter')
 const contactInfo = document.querySelector('.contact-info')
@@ -41,11 +43,17 @@ agreeButton.addEventListener('click', () => {
   authenticationContainerInsideSigninContainer.style.display = 'grid'
 })
 
+singupRedirect.addEventListener('click', () => {
+  authenticationContainerInsideSigninContainer.style.display = 'none'
+  singupContainerInsideSigninContainer.style.display = 'grid'
+})
+
 signinForm.addEventListener('submit', event => {
   event.preventDefault()
   signinContainer.style.display = 'none'
   homeContainer.style.display = 'block'
 })
+
 
 chatsHeaderButtons.forEach(chatsHeaderButton => {
   chatsHeaderButton.addEventListener('click', () => {
