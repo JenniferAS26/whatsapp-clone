@@ -13,6 +13,13 @@
   padding: $top-bottom $right-left;
 }
 
+@mixin headerContainer($height, $display) {
+  width: 100%;
+  height: $height;
+  background-color: $secondary-color;
+  display: $display;
+}
+
 @mixin titleStyle($f-s, $text-align, $letter-spc, $color) {
   font-size: $f-s;
   text-align: $text-align;
