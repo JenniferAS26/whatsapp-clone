@@ -1,6 +1,9 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
+$links-color: rgb(101, 202, 241);
+
+
 .signin-container {
   @include containerStyle(100%, 100%, 40px, 25px);
   &__welcome-container {

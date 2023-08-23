@@ -14,6 +14,9 @@ const contactInfoContainer = document.querySelector('.contact-info-container')
 const cardChat = document.querySelectorAll('.card')
 const videoRecordCounter = document.querySelector('.video-counter')
 const contactInfo = document.querySelector('.contact-info')
+const menuChatContainerIcon = document.querySelector('.chat-menu-icon')
+const backContactInfoIcon = document.querySelector('.arrow-back-icon')
+const menuContactInfoIcon = document.querySelector('.contact-menu-icon')
 
 /** Forms */
 const signinForm = document.querySelector('.signin-container__auth-container--form')
@@ -115,5 +118,18 @@ takePhotoButton.addEventListener('click', () => {
 
 contactInfo.addEventListener('click', () => {
   chatContainer.style.display = 'none'
-  contactInfoContainer.style.display = 'block'
+  contactInfoContainer.style.display = 'grid'
+})
+
+backContactInfoIcon.addEventListener('click', () => {
+  contactInfoContainer.style.display = 'none'
+  chatContainer.style.display = 'block'
+})
+
+menuContactInfoIcon.addEventListener('click', () => {
+  console.log('click para abrir el modal :)');
+})
+
+menuChatContainerIcon.addEventListener('click', () => {
+  console.log('click para abrir el modal :)');
 })

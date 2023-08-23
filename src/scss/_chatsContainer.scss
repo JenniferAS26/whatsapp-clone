@@ -40,6 +40,9 @@ $message-text-color: #707980;
     &--right {
       @extend .chats-container__header--left;
       width: 110px;
+      .chat-menu-icon {
+        cursor: pointer;
+      }
     }
   }
   &__main {
