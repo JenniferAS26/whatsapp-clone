@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+.chat-menu-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  
+  .modalInternod-chat {
+    display: none; // Esto oculta inicialmente el modal.
+    position: fixed; // Esto asegura que el modal esté fijo en la pantalla.
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); // Fondo oscuro con transparencia.
+  
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); // Centra el contenido del modal.
+      width: 80%; // O cualquier otro valor que prefieras.
+      max-width: 320px; // Un ancho máximo.
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+  
+      p {
+        margin-bottom: 12px;
+        cursor: pointer;
+        color: #007BFF; // Color de texto azul.
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+
+
+

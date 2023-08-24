@@ -1,0 +1,81 @@
+@use 'variables' as *;
+
+.contact-menu-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.modalInfo-3puntos {
+  display: none; // Esto oculta inicialmente el modal.
+  position: fixed; // Esto asegura que el modal esté fijo en la pantalla.
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); // Fondo oscuro con transparencia.
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); // Centra el contenido del modal.
+    width: 80%; // O cualquier otro valor que prefieras.
+    max-width: 300px; // Un ancho máximo para controlar la expansión en pantallas más amplias.
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8pxdjfsjdf
+
+    p {
+      margin-bottom: 10px;
+      cursor: pointer;
+      color: #007BFF; // Color de texto azul para indicar que es interactivo.
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.modalInfo-3puntos {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+
+   .modal-content {
+    position: relative;
+    margin: 20% auto;
+    padding: 20px;
+    width: 50%;
+    background-color: #fff;
+   }
+   
+    .close-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+    }
+}

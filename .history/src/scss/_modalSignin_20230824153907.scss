@@ -1,0 +1,58 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.modal-signin-container{
+  display: none;
+  width: 331px;
+  height: 290px;
+  top: 269px;
+  left: 40px;
+  border-radius: 4px;
+  background-color: $secondary-color;
+    h2{
+      font: 'PT Sans', sans-serif;
+      color: $secondary-text-color;
+    }
+}
+
+#modal-signin-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid  $tertiary-color;
+  background-color:  $secondary-color;
+
+  .form__input {
+    display: block; 
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid  $tertiary-color;
+    border-radius: 4px;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: $tertiary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #45a049;
+    }
+  }
+}
+
+
+

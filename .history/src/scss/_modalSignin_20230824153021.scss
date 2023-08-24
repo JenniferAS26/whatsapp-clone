@@ -1,0 +1,26 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.modal-signin-container{
+  display: none;
+  width: 331px;
+  height: 290px;
+  top: 269px;
+  left: 40px;
+  border-radius: 4px;
+    h2{
+      font: 'PT Sans', sans-serif;
+      color: $secondary-text-color;
+    }
+    form{
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+}
+
+
+
