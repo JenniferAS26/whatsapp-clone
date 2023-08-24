@@ -46,3 +46,5 @@ const saveImage = async file => {
   const response = await axios.post(CLOUDINARY_URL, body, { headers });
   return response.data.url
 }
+
+export { createData, readData, updateData, deleteData, saveImage }
