@@ -20,11 +20,18 @@ const menuChatContainerIcon = document.querySelector('.chat-menu-icon')
 const backContactInfoIcon = document.querySelector('.arrow-back-icon')
 const menuContactInfoIcon = document.querySelector('.contact-menu-icon')
 
-/** Forms */
+/** Forms and Inputs */
 const signinForm = document.querySelector('.signin-container__auth-container--form')
+const signupForm = document.querySelector('.signin-container__signup-container--form')
+const singupProfilePicture = document.querySelector('.singup-input-image')
+const singupNameInput = document.querySelector('.singup-name-input')
+const singupNumberInput = document.querySelector('.singup-number-input')
+const singupPasswordInput = document.querySelector('.singup-password-input')
+const singupQuoteInput = document.querySelector('.singup-quote-textarea')
 
 /** Buttons */
 const agreeButton = document.querySelector('.agree-continue')
+const backSignupContainerButton = document.querySelector('.signup-back')
 const chatsHeaderButtons = document.querySelectorAll('.chats')
 const statusHeaderButtons = document.querySelectorAll('.status')
 const callsHeaderButtons = document.querySelectorAll('.calls')
@@ -40,6 +47,11 @@ const cameraIcons = document.querySelectorAll('.camera-icon')
 /** Events */
 agreeButton.addEventListener('click', () => {
   welcomeContainerInsideSinginContainer.style.display = 'none'
+  authenticationContainerInsideSigninContainer.style.display = 'grid'
+})
+
+backSignupContainerButton.addEventListener('click', () => {
+  singupContainerInsideSigninContainer.style.display = 'none'
   authenticationContainerInsideSigninContainer.style.display = 'grid'
 })
 
