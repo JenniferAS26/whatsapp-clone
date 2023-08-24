@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 269px;
+    left: 40px;
+    width: 331px;
+    height: 290px;
+    background-color: $secondary-color;
+    z-index: 1;
+
+    .modal-signin-container {
+      
+    }
+    button {
+        padding: 10px 20px;
+        background-color: $tertiary-color;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: ;
+        }
+    }
+}
+
+
+
+

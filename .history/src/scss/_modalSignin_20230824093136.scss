@@ -1,0 +1,28 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+.modal-signin-container {
+    display: none;
+    position: fixed;
+    top: 267px;
+    left: 38px;
+    width: 329px;
+    height: 288px;
+    background-color: $secondary-color;
+    z-index: -1;
+
+    .button {
+        padding: 8px 20px;
+        background-color: $tertiary-color;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: ;
+        }
+    }
+}
+
+
+
+
