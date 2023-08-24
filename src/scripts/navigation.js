@@ -25,6 +25,7 @@ const signinForm = document.querySelector('.signin-container__auth-container--fo
 
 /** Buttons */
 const agreeButton = document.querySelector('.agree-continue')
+const backSignupContainerButton = document.querySelector('.signup-back')
 const chatsHeaderButtons = document.querySelectorAll('.chats')
 const statusHeaderButtons = document.querySelectorAll('.status')
 const callsHeaderButtons = document.querySelectorAll('.calls')
@@ -40,6 +41,11 @@ const cameraIcons = document.querySelectorAll('.camera-icon')
 /** Events */
 agreeButton.addEventListener('click', () => {
   welcomeContainerInsideSinginContainer.style.display = 'none'
+  authenticationContainerInsideSigninContainer.style.display = 'grid'
+})
+
+backSignupContainerButton.addEventListener('click', () => {
+  singupContainerInsideSigninContainer.style.display = 'none'
   authenticationContainerInsideSigninContainer.style.display = 'grid'
 })
 
