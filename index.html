@@ -45,18 +45,18 @@
               </figure>
               <div class="form__profile-picture--input-container">
                 <label for="input-url"><span>Choose a file</span> or drag it here.</label>
-                <input type="file" id="input-url" class="input-image" accept="image/*" value="profile-photo">
+                <input type="file" id="input-url" class="singup-input-image" accept="image/*" value="profile-photo">
               </div>
             </div>
           </div>
           <div class="form__input-wrapper">
-            <input class="form__input" type="text" placeholder="Enter your name">
+            <input class="form__input singup-name-input" type="text" placeholder="Enter your name">
             <div class="form__input--error error"></div>
-            <input class="form__input" type="number" placeholder="Enter your phone number">
+            <input class="form__input singup-number-input" type="number" placeholder="Enter your phone number">
             <div class="form__input--error error"></div>
-            <input class="form__input" type="password" placeholder="Enter your password">
+            <input class="form__input singup-password-input" type="password" placeholder="Enter your password">
             <div class="form__input--error error"></div>
-            <textarea class="form__textarea" cols="30" rows="10" placeholder="Write a quote"></textarea>
+            <textarea class="form__textarea singup-quote-textarea" cols="30" rows="10" placeholder="Write a quote"></textarea>
           </div>
           <input class="form__submit" type="submit" value="Sign up">
         </form>
@@ -565,6 +565,8 @@
   </div>
 
   <script src="./src/scripts/navigation.js"></script>
+  <script type="module" src="./src/scripts/accounts/createAccount.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://kit.fontawesome.com/4825aba800.js" crossorigin="anonymous"></script>
 </body>
 </html>
