@@ -23,10 +23,16 @@
         <h2 class="signin-container__auth-container--title">Enter your phone number</h2>
         <form class="signin-container__auth-container--form form">
           <div class="form__input-wrapper">
-            <input class="form__input" type="number" placeholder="Enter your phone number">
-            <div class="form__input--error error"></div>
-            <input class="form__input" type="password" placeholder="Enter your password">
-            <div class="form__input--error error"></div>
+            <div class="input-container">
+              <input id="input-phone" class="form__input" type="number" required>
+              <label class="input-label" for="input-phone">Enter your phone number</label>
+              <div class="form__input--error error"></div>
+            </div>
+            <div class="input-container">
+              <input id="input-password" class="form__input" type="password" required>
+              <label class="input-label" for="">Enter your password</label>
+              <div class="form__input--error error"></div>
+            </div>
           </div>
           <button class="form__button">next</button>
         </form>
@@ -50,13 +56,25 @@
             </div>
           </div>
           <div class="form__input-wrapper">
-            <input class="form__input singup-name-input" type="text" placeholder="Enter your name">
-            <div class="form__input--error error"></div>
-            <input class="form__input singup-number-input" type="number" placeholder="Enter your phone number">
-            <div class="form__input--error error"></div>
-            <input class="form__input singup-password-input" type="password" placeholder="Enter your password">
-            <div class="form__input--error error"></div>
-            <textarea class="form__textarea singup-quote-textarea" cols="30" rows="10" placeholder="Write a quote"></textarea>
+            <div class="input-container">
+              <input class="form__input singup-name-input" type="text" required>
+              <label class="input-label" for="">Enter your name</label>
+              <div class="form__input--error error"></div>
+            </div>
+            <div class="input-container">
+              <input class="form__input singup-number-input" type="number" required>
+              <label class="input-label" for="">Enter your phone number</label>
+              <div class="form__input--error error"></div>
+            </div>
+            <div class="input-container">
+              <input class="form__input singup-password-input" type="password" required>
+              <label class="input-label" for="">Enter your password</label>
+              <div class="form__input--error error"></div>
+            </div>
+            <div class="input-container">
+              <textarea class="form__textarea form__input singup-quote-textarea" cols="30" rows="10" required></textarea>
+              <label class="input-label" for="">Write a quote</label>
+            </div>
           </div>
           <input class="form__submit" type="submit" value="Sign up">
         </form>
@@ -512,15 +530,10 @@
         </div>
       </div> -->
     </section>
+    <section class="edit-contact-container">
 
-    <div class="edit-contact">
-      <div class="edit-contact__options">
-        <p>Share</p>
-        <p>Edit</p>
-        <p>View in address bock</p>
-        <p>Verify security code</p>
-      </div>
-    </div>
+    </section>
+    
 
   </div>
   

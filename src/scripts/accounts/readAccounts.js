@@ -79,7 +79,7 @@ export const createInfoContactTemplate = async (id) => {
   const user = await getUserById(id)
   contactInfoContainer.innerHTML = `
     <div class="contact-info-container__top">
-      <img class="arrow-back-icon" src="./src/assets/icons/back.png" alt="back arrow icon">
+      <img class="arrow-back-icon" src="./src/assets/icons/back.png" alt="back arrow icon" onclick="goBack(contactInfoContainer, chatContainer)">
       <div class="contact-info-container__top--info contact">
         <img class="contact__photo" src="${user.url_image}" alt="profile picture">
         <h3 class="contact__name">${user.name}</h3>
@@ -166,6 +166,11 @@ export const createInfoContactTemplate = async (id) => {
       </div>
     </div>
   `
+  const contactMenuIcon = document.querySelector('.contact-menu-icon')
+  contactMenuIcon.addEventListener('click', () => {
+    console.log('soy un precioso click dentro de contact info *-*');
+  })
+
   const deleteButton = document.querySelector('.delete-button')
   deleteButton.addEventListener('click', () => {
     deleteData('users', id)

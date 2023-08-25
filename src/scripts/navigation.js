@@ -164,5 +164,5 @@ takePhotoButton.addEventListener('click', () => {
 // menuChatContainerIcon
 
 menuHomeIcon.addEventListener('click', () => {
-  modalEditContactInfo.style.display = 'block'
+  modalEditContactInfo.classList.toggle('hidden-modal')
 })

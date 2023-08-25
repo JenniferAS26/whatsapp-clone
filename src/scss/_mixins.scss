@@ -56,7 +56,7 @@
   align-items: center;
 }
 
-@mixin inputStyle($width, $height, $bg-color, $border-botom-color, $color, $f-s, $ph-color) {
+@mixin inputStyle($width, $height, $bg-color, $border-botom-color, $color, $f-s, $focus-color) {
   padding: 5px 25px;
   width: $width;
   height: $height;
@@ -65,12 +65,9 @@
   border-bottom: 2px solid $border-botom-color;
   color: $color;
   font-size: $f-s;
-  &::placeholder {
-    color: $ph-color;
-  }
   &:focus {
     border: none;
     outline: none;
-    border-bottom: 4px solid $border-botom-color;
+    border-bottom: 2px solid $focus-color;
   }
 }

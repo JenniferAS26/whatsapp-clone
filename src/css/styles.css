@@ -35,6 +35,9 @@ a {
   margin: auto;
   position: relative;
 }
+.wrapper .hidden-modal {
+  display: block;
+}
 
 .signin-container {
   width: 100%;
@@ -125,25 +128,40 @@ a {
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-rows: 70px 20px 70px 20px;
+  grid-template-rows: repeat(2, 95px);
+}
+.signin-container__auth-container .form__input-wrapper .input-container {
+  position: relative;
+}
+.signin-container__auth-container .form__input-wrapper .input-container .input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10px, 10px);
+  transform-origin: left;
+  transition: transform 0.25s;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  color: #9DA5AC;
 }
 .signin-container__auth-container .form__input {
   padding: 5px 25px;
   width: 260px;
-  height: 50px;
+  height: 40px;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #189C87;
-  color: #D3DAE0;
+  border-bottom: 2px solid #9DA5AC;
+  color: #189C87;
   font-size: 1.7rem;
-}
-.signin-container__auth-container .form__input::placeholder {
-  color: #9DA5AC;
 }
 .signin-container__auth-container .form__input:focus {
   border: none;
   outline: none;
-  border-bottom: 4px solid #189C87;
+  border-bottom: 2px solid #189C87;
+}
+.signin-container__auth-container .form__input:focus-visible ~ .input-label, .signin-container__auth-container .form__input:valid ~ .input-label {
+  transform: translate(0, -20px) scale(0.8) !important;
+  color: #189C87;
 }
 .signin-container__auth-container .form__button {
   cursor: pointer;
@@ -253,25 +271,41 @@ a {
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-rows: 70px 20px 70px 20px;
+  align-items: end;
+  grid-template-rows: repeat(4, 90px);
 }
-.signin-container__signup-container .form__input, .signin-container__signup-container .form__textarea {
-  padding: 5px 25px;
-  width: 260px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #189C87;
-  color: #D3DAE0;
+.signin-container__signup-container .form__input-wrapper .input-container {
+  position: relative;
+}
+.signin-container__signup-container .form__input-wrapper .input-container .input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10px, 10px);
+  transform-origin: left;
+  transition: transform 0.25s;
   font-size: 1.7rem;
-}
-.signin-container__signup-container .form__input::placeholder, .signin-container__signup-container .form__textarea::placeholder {
+  letter-spacing: 1px;
   color: #9DA5AC;
 }
-.signin-container__signup-container .form__input:focus, .signin-container__signup-container .form__textarea:focus {
+.signin-container__signup-container .form__input {
+  padding: 5px 25px;
+  width: 260px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #9DA5AC;
+  color: #189C87;
+  font-size: 1.7rem;
+}
+.signin-container__signup-container .form__input:focus {
   border: none;
   outline: none;
-  border-bottom: 4px solid #189C87;
+  border-bottom: 2px solid #189C87;
+}
+.signin-container__signup-container .form__input:focus-visible ~ .input-label, .signin-container__signup-container .form__input:valid ~ .input-label {
+  transform: translate(0, -20px) scale(0.8) !important;
+  color: #189C87;
 }
 .signin-container__signup-container .form__submit {
   cursor: pointer;
@@ -845,13 +879,10 @@ textarea::placeholder {
   font-size: 1.8rem;
   padding: 5px 10px;
 }
-.chats-container__main--bottom-container .input::placeholder {
-  color: #707980;
-}
 .chats-container__main--bottom-container .input:focus {
   border: none;
   outline: none;
-  border-bottom: 4px solid none;
+  border-bottom: 2px solid #707980;
 }
 .chats-container__main--bottom-container .icons {
   width: 70px;
@@ -1300,19 +1331,6 @@ textarea::placeholder {
 }
 .contact-info-container__encryption--items .delete-button i {
   color: inherit;
-}
-
-.edit-contact {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: 20px;
-  width: 212px;
-  height: 269px;
-  background-color: #232D36;
-  color: #D3DAE0;
-  font-size: 1.8rem;
-  border-radius: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
