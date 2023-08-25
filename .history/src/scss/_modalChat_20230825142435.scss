@@ -1,0 +1,37 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+  .modalChat {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 212px;
+    height: 269px;
+    background-color: $secondary-color;
+    color: $secondary-text-color;
+    font-size: 1.8rem;
+    border-radius: 20px;
+  
+    .modal-content {
+      width: 209px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      background-color: $secondary-color;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+  
+      p {
+        margin-bottom: 12px;
+        cursor: pointer;
+        color: $primary-text-color; 
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+
+
+

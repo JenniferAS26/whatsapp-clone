@@ -1,0 +1,62 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Variables (puedes modificar estas para cambiar el look & feel del modal)
+$modal-background: rgba(0, 0, 0, 0.7);
+$modal-content-background: #fff;
+$modal-content-width: 300px;
+$modal-title-font-size: 24px;
+$modal-message-font-size: 18px;
+$modal-button-background: #007BFF;
+$modal-button-hover-background: darken($modal-button-background, 10%);
+$modal-button-color: #fff;
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $modal-background;
+  z-index: 9999;
+
+  .modal-content {
+    width: $modal-content-width;
+    margin: 15% auto;
+    background: $modal-content-background;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: $modal-title-font-size;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: $modal-message-font-size;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: $modal-button-background;
+      color: $modal-button-color;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: $modal-button-hover-background;
+      }
+    }
+  }
+}
+
+
+
+
+

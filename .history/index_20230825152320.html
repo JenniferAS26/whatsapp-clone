@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Clone</title>
+  <link rel="stylesheet" href="./src/css/styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <section class="signin-container">
+      <div class="signin-container__welcome-container">
+        <h1 class="signin-container__welcome-container--title">Welcome to WhatsApp</h1>
+        <div class="signin-container__welcome-container--image-container"></div>
+        <p class="signin-container__welcome-container--text">Read our <span>Privacy Policy</span>. Tap "Agree and continue" to accept the <span>Terms of Service</span>.</p>
+        <button class="signin-container__welcome-container--button agree-continue">Agree and continue</button>
+        <div class="signin-container__welcome-container--brand-container">
+          <p class="text">from</p>
+          <p class="brand">FACEBOOK</p>
+        </div>
+      </div>
+      <div class="signin-container__auth-container">
+        <h2 class="signin-container__auth-container--title">Enter your phone number</h2>
+        <form class="signin-container__auth-container--form form">
+          <div class="form__input-wrapper">
+            <input class="form__input" type="number" placeholder="Enter your phone number">
+            <div class="form__input--error error"></div>
+            <input class="form__input" type="password" placeholder="Enter your password">
+            <div class="form__input--error error"></div>
+          </div>
+          <button class="form__button" id="next-button">next</button>
+        </form>
+        <span class="signup-redirect">Sign up for free</span>
+      </div>
+      <div class="signin-container__signup-container">
+        <button class="signup-back">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <h2 class="signin-container__signup-container--title">Create an account</h2>
+        <form class="signin-container__signup-container--form form">
+          <div class="profile-picture-wrapper">
+            <div class="form__profile-picture">
+              <figure class="form__profile-picture--image-container" name="avatar">
+                <img class="current-picture" src="./src/assets/images/user-silhouette.jpg" alt="dummy image">
+              </figure>
+              <div class="form__profile-picture--input-container">
+                <label for="input-url"><span>Choose a file</span> or drag it here.</label>
+                <input type="file" id="input-url" class="singup-input-image" accept="image/*" value="profile-photo">
+              </div>
+            </div>
+          </div>
+          <div class="form__input-wrapper">
+            <input class="form__input singup-name-input" type="text" placeholder="Enter your name">
+            <div class="form__input--error error"></div>
+            <input class="form__input singup-number-input" type="number" placeholder="Enter your phone number">
+            <div class="form__input--error error"></div>
+            <input class="form__input singup-password-input" type="password" placeholder="Enter your password">
+            <div class="form__input--error error"></div>
+            <textarea class="form__textarea singup-quote-textarea" cols="30" rows="10" placeholder="Write a quote"></textarea>
+          </div>
+          <input class="form__submit" type="submit" value="Sign up">
+        </form>
+      </div>
+    </section>
+    <section class="home-container">
+      <div class="home-container__header">
+        <div class="home-container__header--top">
+          <h4 class="title">WhatsApp</h4>
+          <div class="icons">
+            <img src="./src/assets/icons/search.png" alt="search icon">
+            <img class="home-menu-icon" src="./src/assets/icons/menu-vertical.png" alt="menu icon">
+          </div>
+        </div>
+        <div class="home-container__header--bottom home-header">
+          <img class="home-header__image camera-icon" src="./src/assets/icons/camera.png" alt="camera icon">
+          <div class="home-header__options-container">
+            <button class="home-header__options-container--option chats">CHATS</button>
+            <button class="home-header__options-container--option status">STATUS</button>
+            <button class="home-header__options-container--option calls">CALLS</button>
+          </div>
+        </div>
+      </div>
+      <div class="home-container__main">
+        <div class="home-container__main--cards-container">
+          <!-- <div class="card">
+            <div class="profile-container">
+              <img class="profile-container__image" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+              <p class="profile-container__title">Jane Doe</p>
+            </div>
+            <span class="connection">7:30pm</span>
+          </div> -->
+          <button class="message-button">
+            <img src="./src/assets/icons/message.png" alt="message icon">
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="status-container">
+      <div class="status-container__header">
+        <div class="status-container__header--top">
+          <h4 class="title">WhatsApp</h4>
+          <div class="icons">
+            <img src="./src/assets/icons/search.png" alt="search icon">
+            <img src="./src/assets/icons/menu-vertical.png" alt="menu icon">
+          </div>
+        </div>
+        <div class="status-container__header--bottom status-header">
+          <img class="status-header__image camera-icon" src="./src/assets/icons/camera.png" alt="camera icon">
+          <div class="status-header__options-container">
+            <button class="status-header__options-container--option chats">CHATS</button>
+            <button class="status-header__options-container--option status">STATUS</button>
+            <button class="status-header__options-container--option calls">CALLS</button>
+          </div>
+        </div>
+      </div>
+      <div class="status-container__main">
+        <div class="status-container__main--my-status my-status">
+          <div class="my-status__card">
+            <div class="my-status__card--image-container">
+              <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+            </div>
+            <div class="my-status__card--info-container">
+              <h3 class="title">My status</h3>
+              <p class="date-info">Yesterday, 10:55 am</p>
+            </div>
+            <img src="./src/assets/icons/menu-horizontal.png" alt="menu icon">
+          </div>
+        </div>
+        <div class="status-container__main--recent-updates recent-updates">
+          <h3 class="recent-updates__title">Recent updates</h3>
+          <div class="recent-updates__card">
+            <div class="recent-updates__card--image-container">
+              <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+            </div>
+            <div class="recent-updates__card--info-container">
+              <h3 class="title">Jane Doe</h3>
+              <p class="date-info">30 minutes ago</p>
+            </div>
+          </div>
+          <div class="recent-updates__card">
+            <div class="recent-updates__card--image-container">
+              <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+            </div>
+            <div class="recent-updates__card--info-container">
+              <h3 class="title">Jane Doe</h3>
+              <p class="date-info">30 minutes ago</p>
+            </div>
+          </div>
+          <div class="recent-updates__card">
+            <div class="recent-updates__card--image-container">
+              <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+            </div>
+            <div class="recent-updates__card--info-container">
+              <h3 class="title">Jane Doe</h3>
+              <p class="date-info">30 minutes ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="status-container__main--viewed-updates viewed-updates">
+          <h3 class="viewed-updates__title">Viewed updates</h3>
+          <div class="viewed-updates__card">
+            <div class="viewed-updates__card--image-container">
+              <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+            </div>
+            <div class="viewed-updates__card--info-container">
+              <h3 class="title">Jane Doe</h3>
+              <p class="date-info">30 minutes ago</p>
+            </div>
+          </div>
+          <div class="viewed-updates__card">
+            <div class="viewed-updates__card--image-container">
+              <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+            </div>
+            <div class="viewed-updates__card--info-container">
+              <h3 class="title">Jane Doe</h3>
+              <p class="date-info">30 minutes ago</p>
+            </div>
+          </div>
+          <div class="viewed-updates__card">
+            <div class="viewed-updates__card--image-container">
+              <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+            </div>
+            <div class="viewed-updates__card--info-container">
+              <h3 class="title">Jane Doe</h3>
+              <p class="date-info">30 minutes ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="status-container__main--buttons">
+          <button class="edit">
+            <img src="./src/assets/icons/edit.png" alt="edit icon">
+          </button>
+          <button class="take-picture">
+            <img src="./src/assets/icons/take-a-picture.png" alt="picture status icon">
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="calls-container">
+      <div class="calls-container__header">
+        <div class="calls-container__header--top">
+          <h4 class="title">WhatsApp</h4>
+          <div class="icons">
+            <img src="./src/assets/icons/search.png" alt="search icon">
+            <img src="./src/assets/icons/menu-vertical.png" alt="menu icon">
+          </div>
+        </div>
+        <div class="calls-container__header--bottom calls-header">
+          <img class="calls-header__image camera-icon" src="./src/assets/icons/camera.png" alt="camera icon">
+          <div class="calls-header__options-container">
+            <button class="calls-header__options-container--option chats">CHATS</button>
+            <button class="calls-header__options-container--option status">STATUS</button>
+            <button class="calls-header__options-container--option calls">CALLS</button>
+          </div>
+        </div>
+      </div>
+      <div class="calls-container__main">
+        <div class="calls__card">
+          <div class="calls__card--image-container">
+            <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+          </div>
+          <div class="calls__card--info-container">
+            <h3 class="title">Jane Doe</h3>
+            <div class="detail">
+              <img class="profile-image" src="./src/assets/icons/calling.png" alt="call icon">
+              <p class="quantity">(3)</p>
+              <p class="date-info">Yesterday, 10:55 am</p>
+            </div>
+          </div>
+          <img class="calls__card--image" src="./src/assets/icons/phone.png" alt="telephone icon">
+        </div>
+        <div class="calls__card">
+          <div class="calls__card--image-container">
+            <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+          </div>
+          <div class="calls__card--info-container">
+            <h3 class="title">Jane Doe</h3>
+            <div class="detail">
+              <img class="profile-image" src="./src/assets/icons/missing-call.png" alt="call icon">
+              <p class="quantity">(3)</p>
+              <p class="date-info">Yesterday, 10:55 am</p>
+            </div>
+          </div>
+          <img class="calls__card--image" src="./src/assets/icons/video-camera.png" alt="telephone icon">
+        </div>
+        <div class="calls__card">
+          <div class="calls__card--image-container">
+            <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+          </div>
+          <div class="calls__card--info-container">
+            <h3 class="title">Jane Doe</h3>
+            <div class="detail">
+              <img class="profile-image" src="./src/assets/icons/missing-call.png" alt="call icon">
+              <p class="quantity">(3)</p>
+              <p class="date-info">Yesterday, 10:55 am</p>
+            </div>
+          </div>
+          <img class="calls__card--image" src="./src/assets/icons/phone.png" alt="telephone icon">
+        </div>
+        <div class="calls__card">
+          <div class="calls__card--image-container">
+            <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+          </div>
+          <div class="calls__card--info-container">
+            <h3 class="title">Jane Doe</h3>
+            <div class="detail">
+              <img class="profile-image" src="./src/assets/icons/calling.png" alt="call icon">
+              <p class="quantity">(3)</p>
+              <p class="date-info">Yesterday, 10:55 am</p>
+            </div>
+          </div>
+          <img class="calls__card--image" src="./src/assets/icons/phone.png" alt="telephone icon">
+        </div>
+        <div class="calls__card">
+          <div class="calls__card--image-container">
+            <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+          </div>
+          <div class="calls__card--info-container">
+            <h3 class="title">Jane Doe</h3>
+            <div class="detail">
+              <img class="profile-image" src="./src/assets/icons/calling.png" alt="call icon">
+              <p class="quantity">(3)</p>
+              <p class="date-info">Yesterday, 10:55 am</p>
+            </div>
+          </div>
+          <img class="calls__card--image" src="./src/assets/icons/phone.png" alt="telephone icon">
+        </div>
+        <div class="calls__card">
+          <div class="calls__card--image-container">
+            <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+          </div>
+          <div class="calls__card--info-container">
+            <h3 class="title">Jane Doe</h3>
+            <div class="detail">
+              <img class="profile-image" src="./src/assets/icons/calling.png" alt="call icon">
+              <p class="quantity">(3)</p>
+              <p class="date-info">Yesterday, 10:55 am</p>
+            </div>
+          </div>
+          <img class="calls__card--image" src="./src/assets/icons/video-camera.png" alt="telephone icon">
+        </div>
+        <div class="calls__card">
+          <div class="calls__card--image-container">
+            <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+          </div>
+          <div class="calls__card--info-container">
+            <h3 class="title">Jane Doe</h3>
+            <div class="detail">
+              <img class="profile-image" src="./src/assets/icons/calling.png" alt="call icon">
+              <p class="quantity">(3)</p>
+              <p class="date-info">Yesterday, 10:55 am</p>
+            </div>
+          </div>
+          <img class="calls__card--image" src="./src/assets/icons/phone.png" alt="telephone icon">
+        </div>
+        <div class="calls__card">
+          <div class="calls__card--image-container">
+            <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+          </div>
+          <div class="calls__card--info-container">
+            <h3 class="title">Jane Doe</h3>
+            <div class="detail">
+              <img class="profile-image" src="./src/assets/icons/calling.png" alt="call icon">
+              <p class="quantity">(3)</p>
+              <p class="date-info">Yesterday, 10:55 am</p>
+            </div>
+          </div>
+          <img class="calls__card--image" src="./src/assets/icons/phone.png" alt="telephone icon">
+        </div>
+        <button class="make-a-call">
+          <img src="./src/assets/icons/make-a-call.png" alt="call icon">
+        </button>
+      </div>
+    </section>
+    <section class="chats-container">
+      <!-- <div class="chats-container__header">
+        <div class="chats-container__header--left">
+          <img class="arrow-back" src="./src/assets/icons/back-grey.png" alt="arrow icon">
+          <div class="contact-info">
+            <img src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+            <p class="username">Jane Doe</p>
+          </div>
+        </div>
+        <div class="chats-container__header--right">
+          <img src="./src/assets/icons/video-camera-white.png" alt="video camera icon">
+          <img src="./src/assets/icons/phone-white.png" alt="telephone icon">
+          <img class="chat-menu-icon" src="./src/assets/icons/menu-vertical.png" alt="menu icon">
+        </div>
+      </div>
+      <div class="chats-container__main">
+        <div class="chats-container__main--wallpaper-container"></div>
+        <div class="chats-container__main--bottom-container">
+          <div class="emojis">
+            <img class="smiley-face" src="./src/assets/icons/smiley-face.png" alt="smiley-face icon">
+          </div>
+          <input class="input" type="text" placeholder="Type a message">
+          <div class="icons">
+            <img class="clip-icon" src="./src/assets/icons/clip.png" alt="clip icon">
+            <img class="camera-icon" src="./src/assets/icons/camera.png" alt="camera icon">
+          </div>
+          <img class="microphone-icon" src="./src/assets/icons/voice-note.png" alt="microphone icon">
+        </div>
+      </div> -->
+    </section>
+    <section class="take-a-picture-container">
+      <div class="take-a-picture-container__top">
+        <button class="close-picture">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="video-counter">
+          <span>00:00</span>
+        </div>
+        <img class="flash-icon" src="./src/assets/icons/non-flash.png" alt="flash icon">
+      </div>
+      <div class="take-a-picture-container__gallery">
+        <img src="./src/assets/images/image1.jpg" alt="">
+        <img src="./src/assets/images/image2.jpg" alt="">
+        <img src="./src/assets/images/image3.jpg" alt="">
+        <img src="./src/assets/images/image4.jpg" alt="">
+        <img src="./src/assets/images/image5.jpg" alt="">
+        <img src="./src/assets/images/image6.jpg" alt="">
+      </div>
+      <div class="take-a-picture-container__tools">
+        <div class="photo-icon-container">
+          <i class="fa-regular fa-image"></i>
+        </div>
+        <button class="take-photo">
+          <div></div>
+        </button>
+        <div class="selfie-icon-container">
+          <img src="./src/assets/icons/selfie.png" alt="change camera icon">
+        </div>
+      </div>
+      <div class="take-a-picture-container__choose-option">
+        <button class="take-video-option">Video</button>
+        <button class="take-foto-option">Photo</button>
+      </div>
+    </section>
+    <section class="send-picture-container">
+      <div class="send-picture-container__top">
+        <button class="close-picture">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="right">
+          <button>
+            <i class="fa-solid fa-crop"></i>
+          </button>
+          <button>
+            <i class="fa-regular fa-note-sticky"></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-t"></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-pencil"></i>
+          </button>
+        </div>
+      </div>
+      <div class="send-picture-container__choose-option">
+        <div class="name-wrapper">
+          <p>Jane Doe</p>
+        </div>
+        <img class="send-icon" src="./src/assets/icons/send.png" alt="send icon">
+      </div>
+    </section>
+    <section class="contact-info-container">
+      <!-- <div class="contact-info-container__top">
+        <img class="arrow-back-icon" src="./src/assets/icons/back.png" alt="back arrow icon">
+        <div class="contact-info-container__top--info contact">
+          <img class="contact__photo" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
+          <h3 class="contact__name">Jane Doe</h3>
+          <span class="contact__number">+57 315 1234569</span>
+          <div class="contact__actions">
+            <div class="contact__actions--options">
+              <button>
+                <i class="fa-solid fa-phone"></i>
+              </button>
+              <span>Audio</span>
+            </div>
+            <div class="contact__actions--options">
+              <button>
+                <i class="fa-solid fa-video"></i>
+              </button>
+              <span>Video</span>
+            </div>
+            <div class="contact__actions--options">
+              <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <span>Search</span>
+            </div>
+          </div>
+        </div>
+        <img class="contact-menu-icon" src="./src/assets/icons/menu-vertical.png" alt="menu icon">
+      </div>
+      <div class="contact-info-container__media-links-docs">
+        <div class="contact-info-container__media-links-docs--top">
+          <p>Media, links, and docs</p>
+          <div>
+            <span>8.215</span>
+            <button>
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="contact-info-container__media-links-docs--carousel">
+          <img src="./src/assets/images/image1.jpg" alt="carousel images">
+          <img src="./src/assets/images/image2.jpg" alt="carousel images">
+          <img src="./src/assets/images/image3.jpg" alt="carousel images">
+          <img src="./src/assets/images/image4.jpg" alt="carousel images">
+        </div>
+      </div>
+      <div class="contact-info-container__notifications">
+        <div class="contact-info-container__notifications--items">
+          <i class="fa-solid fa-bell"></i>
+          <span>Mute notifications</span>
+        </div>
+        <div class="contact-info-container__notifications--items">
+          <i class="fa-solid fa-fire"></i>
+          <span>Custom notifications</span>
+        </div>
+        <div class="contact-info-container__notifications--items">
+          <i class="fa-regular fa-image"></i>
+          <span>Media visibility</span>
+        </div>
+        <div class="contact-info-container__notifications--items">
+          <i class="fa-solid fa-star"></i>
+          <span>Starred messages</span>
+        </div>
+      </div>
+      <div class="contact-info-container__encryption">
+        <div class="contact-info-container__encryption--items">
+          <button class="delete-button">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          <div class="description-wrapper">
+            <p>Delete</p>
+          </div>
+        </div>
+        <div class="contact-info-container__encryption--items">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <div class="description-wrapper">
+            <p>Disappearing messages</p>
+            <span>Off</span>
+          </div>
+        </div>
+        <div class="contact-info-container__encryption--items">
+          <i class="fa-solid fa-lock-open"></i>
+          <div class="description-wrapper">
+            <p>Chat lock</p>
+          </div>
+        </div>
+      </div> -->
+    </section>
+    <!-- modal para siginin -->
+    <div id="errorModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); z-index:9999;">
+      <h2>Error</h2>
+      <p id="errorMessage"></p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+    
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <p>Nuevo usuario creado exitosamente.</p>
+      </div>
+    </div>
+  
+    <div class="modalEdit-contact">
+      <div class="edit-contact__options">
+        <p>Share</p>
+        <p>Edit</p>
+        <p>View in address bock</p>
+        <p>Verify security code</p>
+      </div>
+    </div>
+
+    <div class="modalChat" id="modalChat">
+      <div class="modal-content">
+        <p>View contact</p>
+        <p>Media, links, and docs</p>
+        <p>Search</p>
+        <p>Mute notifications</p>
+        <p>Disappearing messages</p>
+        <p>Wallpaper</p>
+        <p>More</p>
+      </div>
+    </div>
+
+    <div class="modal" id="confirmModal" style="display:none;">
+      <div class="modal-content">
+        <p>¿Estás seguro de que deseas eliminar estos datos?</p>
+        <button id="confirmDelete">Sí, eliminar</button>
+        <button id="cancelDelete">Cancelar</button>
+      </div>
+    </div>
+    
+
+  </div>
+  
+  <script src="./src/scripts/resources/redirectFunctions.js"></script>
+  <script type="module" src="./src/scripts/navigation.js"></script>
+  <script type="module" src="./src/scripts/accounts/readAccounts.js"></script>
+  <script type="module" src="./src/scripts/accounts/createAccount.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://kit.fontawesome.com/4825aba800.js" crossorigin="anonymous"></script>
+  <script src="./src/srcipts/signin.js"></script>
+  <script src="./src/srcipts/signup.js"></script>
+</body>
+</html>
+
