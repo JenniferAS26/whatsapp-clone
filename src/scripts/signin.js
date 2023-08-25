@@ -1,24 +1,49 @@
-
 const predefinedPhone = "13256984565";
 const predefinedPassword = "147856";
 
 const nextButton = document.getElementById('nextButton');
-const openModalBtn = document.getElementById('openModal');
-const modal = document.getElementById('modal');
+const modal = document.querySelector('.modal-signin-container');
 const modalForm = document.getElementById('modal-signin-form');
 
+// Creando el modal de errores usando JavaScript
+const errorModal = document.createElement('div');
+errorModal.setAttribute('id', 'errorModal');
+errorModal.setAttribute('class', 'error-modal');
 
-nextButton.addEventListener('click', signIn);
+const errorModalContent = document.createElement('div');
+errorModalContent.setAttribute('class', 'error-modal-content');
 
+const closeErrorModalBtn = document.createElement('span');
+closeErrorModalBtn.setAttribute('class', 'close-button');
+closeErrorModalBtn.innerHTML = '&times;';
 
-openModalBtn.addEventListener('click', function() {
-    modal.style.display = 'block';
-});
+const errorMessageDiv = document.createElement('p');
+errorMessageDiv.setAttribute('id', 'errorMessage');
 
+errorModalContent.appendChild(closeErrorModalBtn);
+errorModalContent.appendChild(errorMessageDiv);
+errorModal.appendChild(errorModalContent);
+document.body.appendChild(errorModal);
 
-modalForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Previene que el formulario se envíe
-    signIn();
+closeErrorModalBtn.onclick = function() {
+    errorModal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target === errorModal) {
+        errorModal.style.display = 'none';
+    }
+}
+
+function showErrorModal(message) {
+    errorMessageDiv.textContent = message;
+    errorModal.style.display = 'block';
+}
+
+nextButton.addEventListener('click', function() {
+    if (validateFields()) {
+        modal.style.display = 'flex';
+    }
 });
 
 window.addEventListener('click', function(event) {
@@ -27,25 +52,43 @@ window.addEventListener('click', function(event) {
     }
 });
 
+modalForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    signIn();
+});
+
+function validateFields() {
+    const phoneInput = document.getElementById("phone");
+    const passwordInput = document.getElementById("password");
+
+    if (!phoneInput.value.trim()) {
+        showErrorModal("Por favor, ingresa tu número telefónico.");
+        return false;
+    }
+
+    if (!passwordInput.value.trim()) {
+        showErrorModal("Por favor, ingresa tu contraseña.");
+        return false;
+    }
+
+    return true;
+}
+
 function signIn() {
-    const phoneInput = document.getElementById("phone").value;
-    const passwordInput = document.getElementById("password").value;
+    const phoneInputValue = document.getElementById("phone").value;
+    const passwordInputValue = document.getElementById("password").value;
 
-    if (!phoneInput || !passwordInput) {
-        alert("Por favor, completa todos los campos.");
+    if (phoneInputValue !== predefinedPhone) {
+        showErrorModal("El número ingresado no existe.");
         return;
     }
 
-    if (phoneInput !== predefinedPhone) {
-        alert("El número ingresado no existe.");
+    if (passwordInputValue !== predefinedPassword) {
+        showErrorModal("La contraseña ingresada es incorrecta.");
         return;
     }
 
-    if (passwordInput !== predefinedPassword) {
-        alert("La contraseña ingresada es incorrecta.");
-        return;
-    }
-
-    alert(`Bienvenido ${phoneInput}`);
+    alert(`Bienvenido ${phoneInputValue}`);
+    modal.style.display = 'none';
     window.location.href = "index.html";
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Clone</title>
-    <link rel="stylesheet" href="./src/css/styles.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Clone</title>
+  <link rel="stylesheet" href="./src/css/styles.css">
+</head>
 <body>
   <div class="wrapper">
     <section class="signin-container">
@@ -19,7 +19,6 @@
           <p class="brand">FACEBOOK</p>
         </div>
       </div>
-       
       <div class="signin-container__auth-container">
         <h2 class="signin-container__auth-container--title">Enter your phone number</h2>
         <form class="signin-container__auth-container--form form">
@@ -29,27 +28,11 @@
             <input class="form__input" type="password" placeholder="Enter your password">
             <div class="form__input--error error"></div>
           </div>
-          <button class="form__button" id="nextButton">next</button>
+          <button class="form__button" id="next-button">next</button>
         </form>
         <span class="signup-redirect">Sign up for free</span>
       </div>
       <div class="signin-container__signup-container">
-<<<<<<< HEAD
-       
-    <div class="modal-signup-container" id="modal-signup-container">
-      <h2>Create an account</h2>
-      <form class="signup-form">
-          <div class="modal__signup">
-              <input type="text" placeholder="Enter your name">
-              <input type="number" placeholder="Enter your phone number">
-              <input type="password" placeholder="Enter your password">
-              <input type="url" placeholder="Enter your image URL">
-              <textarea placeholder="Enter your phrase"></textarea>
-              <button type="submit">Sign up</button>
-          </div>
-      </form>
-    <!-- </div> <h1>pending...</h1> -->
-=======
         <button class="signup-back">
           <i class="fa-solid fa-chevron-left"></i>
         </button>
@@ -77,9 +60,7 @@
           </div>
           <input class="form__submit" type="submit" value="Sign up">
         </form>
->>>>>>> main
       </div>
-    
     </section>
     <section class="home-container">
       <div class="home-container__header">
@@ -532,61 +513,13 @@
       </div> -->
     </section>
 
-    <!-- <button id="openModal">Abrir Modal</button> -->
-    <div class="modal-signin-container">
-      <div class="modal modal-close"></div>
-      <h2>Inicio de Sesión</h2>
-      <form id="modal-signin-form">
-          <input class="form__input" type="number" id="phone" placeholder="Enter your phone number">
-          <input class="form__input" type="password" id="password" placeholder="Enter your password">
-          <button type="button" onclick="signIn()">Sign in</button>
-      </form>
-    </div>
-
-    <div class="modal-signup-container" id="modal-signup-container">
-      <h2>Create an account</h2>
-      <form class="signup-form">
-          <div class="modal__signup">
-              <input type="text" placeholder="Enter your name">
-              <input type="number" placeholder="Enter your phone number">
-              <input type="password" placeholder="Enter your password">
-              <input type="url" placeholder="Enter your image URL">
-              <textarea placeholder="Enter your phrase"></textarea>
-              <button type="submit">Sign up</button>
-          </div>
-      </form>
-    </div>
-
-    <img class="contact-menu-icon" src="./src/assets/icons/menu-vertical.png" alt="menú icon">
-    <div class="modalInfo-3puntos" id="modal-3puntos">
-        <div class="modal-content">
-            <!-- <span class="close-btn">&times;</span> -->
-            <p>Share</p>
-            <p>Edit</p>
-            <p>View in address bock</p>
-            <p>Verify security code</p>
-        </div>
-    </div>
-
-    <img class="chat-menu-icon" src="./src/assets/icons/menu-vertical.png" alt="menu icon">
-    <div class="modalInternod-chat" id="modalInterno-chat">
-       <div class="modal-content">
-          <!-- <span class="close-btn">&times;</span> -->
-          <p>View contact</p>
-          <p>Media, links, and docs</p>
-          <p>Search</p>
-          <p>Mute notifications</p>
-          <p>Disappearing messages</p>
-          <p>Wallpaper</p>
-          <p>More</p>
-        </div>
-    </div>
-
+    <div class="error-modal" id="errorModal">
+      <div class="error-modal-content">
+          <p id="errorMessage"></p>
+      </div>
   </div>
-
-
-  <script src="./src/scripts/navigation.js"></script>
-    <div class="edit-contact">
+  
+    <div class="modalEdit-contact">
       <div class="edit-contact__options">
         <p>Share</p>
         <p>Edit</p>
@@ -594,6 +527,27 @@
         <p>Verify security code</p>
       </div>
     </div>
+
+    <div class="modalChat" id="modalChat">
+      <div class="modal-content">
+        <p>View contact</p>
+        <p>Media, links, and docs</p>
+        <p>Search</p>
+        <p>Mute notifications</p>
+        <p>Disappearing messages</p>
+        <p>Wallpaper</p>
+        <p>More</p>
+      </div>
+    </div>
+
+    <div class="modal" id="confirmModal" style="display:none;">
+      <div class="modal-content">
+        <p>¿Estás seguro de que deseas eliminar estos datos?</p>
+        <button id="confirmDelete">Sí, eliminar</button>
+        <button id="cancelDelete">Cancelar</button>
+      </div>
+    </div>
+    
 
   </div>
   
@@ -603,10 +557,8 @@
   <script type="module" src="./src/scripts/accounts/createAccount.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://kit.fontawesome.com/4825aba800.js" crossorigin="anonymous"></script>
-  <script src="./src/scripts/signin.js"></script>
-  <script src="./src/scripts/signup.js"></script>
-  <script src="./src/scripts/modalInfot-3puntos.js"></script>
-  <script src="./src/scripts/modalInterno-chat.js"></script>
+  <script src="./src/srcipts/signin.js"></script>
+  <script src="./src/srcipts/signup.js"></script>
 </body>
 </html>
 

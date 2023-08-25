@@ -164,5 +164,5 @@ takePhotoButton.addEventListener('click', () => {
 // menuChatContainerIcon
 
 menuHomeIcon.addEventListener('click', () => {
-  modalEdit-contact.style.display = 'block'
+  modalEditContactInfo.style.display = 'block'
 })

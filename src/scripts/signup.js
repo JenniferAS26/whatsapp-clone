@@ -1,41 +1,39 @@
 // Simulación de una base de datos de usuarios con números de teléfono.
 let users = [];
 
-document.querySelector('.modal-close').addEventListener('click', function() {
-    document.querySelector('.modal-signup-container').style.display = 'none';
-);
+
+/* document.getElementById('modalClose').addEventListener('click', function() {
+    document.getElementById('modalSignup').style.display = 'none';
+}); */
 
 // Mostrar el modal de Sign up al hacer clic en "Sign up for free"
-document.querySelector('.signup-redirect').addEventListener('click', function() {
-    document.querySelector('.modal-signup-container').style.display = 'block';
+document.getElementById('showSignupModal').addEventListener('click', function() {
+    document.getElementById('modalSignup').style.display = 'block';
 });
 
 // Verificar y registrar un nuevo usuario al completar el formulario de registro
-document.querySelector('.signup-form').addEventListener('submit', function(event) {
+document.getElementById('signupForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    let phoneNumber = document.querySelector('.signup-form input[type="number"]').value;
-
-    // Verificación del número de teléfono
+    let phoneNumber = document.getElementById('signupPhone').value;
     let userExists = users.some(user => user.phoneNumber === phoneNumber);
 
     if(userExists) {
         alert('El número de celular ingresado ya está registrado.');
     } else {
         let newUser = {
-            name: document.querySelector('.signup-form input[type="text"]').value,
+            name: document.getElementById('signupName').value,
             phoneNumber: phoneNumber,
-            password: document.querySelector('.signup-form input[type="password"]').value,
-            imageUrl: document.querySelector('.signup-form input[type="url"]').value,
-            phrase: document.querySelector('.signup-form textarea').value
+            password: document.getElementById('signupPassword').value,
+            imageUrl: document.getElementById('signupImageURL').value,
+            phrase: document.getElementById('signupPhrase').value
         };
 
-        // Suponiendo que postUser es una función que envía al servidor el nuevo usuario.
         postUser(newUser).then(response => {
             if(response.success) {
                 users.push(newUser);
                 alert('El nuevo usuario fue creado exitosamente.');
-                document.querySelector('.modal-signup-container').style.display = 'none';
+                document.getElementById('modalSignup').style.display = 'none';
             } else {
                 alert('Hubo un error al crear el usuario.');
             }
@@ -44,12 +42,11 @@ document.querySelector('.signup-form').addEventListener('submit', function(event
 });
 
 // Verificar las credenciales al completar el formulario de inicio de sesión
-document.querySelector('.signin-container__auth-container--form').addEventListener('submit', function(event) {
+document.getElementById('signinForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    let phoneNumber = document.querySelector('.signin-container__auth-container--form input[type="number"]').value;
-    let password = document.querySelector('.signin-container__auth-container--form input[type="password"]').value;
-
+    let phoneNumber = document.getElementById('signinPhone').value;
+    let password = document.getElementById('signinPassword').value;
     let user = users.find(u => u.phoneNumber === phoneNumber);
 
     if (user && user.password === password) {
