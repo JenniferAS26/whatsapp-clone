@@ -33,6 +33,7 @@ a {
   height: 823px;
   background-color: #101D24;
   margin: auto;
+  position: relative;
 }
 
 .signin-container {
@@ -1299,6 +1300,19 @@ textarea::placeholder {
 }
 .contact-info-container__encryption--items .delete-button i {
   color: inherit;
+}
+
+.edit-contact {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 212px;
+  height: 269px;
+  background-color: #232D36;
+  color: #D3DAE0;
+  font-size: 1.8rem;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
