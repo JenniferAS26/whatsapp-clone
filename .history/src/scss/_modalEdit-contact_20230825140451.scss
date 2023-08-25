@@ -1,5 +1,4 @@
 @use 'variables' as *;
-@use 'mixins' as *;
 
 .contact-menu-icon {
   width: 24px;
@@ -14,15 +13,12 @@
 
 .modalEdit-contact {
   display: none;
-  position: absolute;
+  position: absolute; 
+  left: 215px;
   top: 40px;
-  right: 20px;
-  width: 212px;
+  width: 212px; 
   height: 269px;
-  background-color: $secondary-color;
-  color: $secondary-text-color;
-  font-size: 1.8rem;
-  border-radius: 20px;
+  background-color: $secondary-color; 
 
   .modal-content {
     position: absolute;

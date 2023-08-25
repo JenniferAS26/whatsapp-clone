@@ -1,5 +1,4 @@
 @use 'variables' as *;
-@use 'mixins' as *;
 
 .chat-menu-icon {
     width: 24px;
@@ -12,17 +11,14 @@
     }
   }
   
-  .modalChat {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 20px;
-    width: 212px;
+  .modalCaht {
+    display: none; 
+    position: fixed; 
+    left: 215px;
+    top: 27px;
+    width: 212px; 
     height: 269px;
-    background-color: $secondary-color;
-    color: $secondary-text-color;
-    font-size: 1.8rem;
-    border-radius: 20px;
+    background-color:  $secondary-color; 
   
     .modal-content {
       width: 209px;

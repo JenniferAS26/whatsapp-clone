@@ -1434,16 +1434,19 @@ textarea::placeholder {
   opacity: 0.7;
 }
 
-.modalInternod-chat {
+.modalChat {
   display: none;
-  position: fixed;
-  left: 215px;
-  top: 27px;
+  position: absolute;
+  top: 40px;
+  right: 20px;
   width: 212px;
   height: 269px;
   background-color: #232D36;
+  color: #D3DAE0;
+  font-size: 1.8rem;
+  border-radius: 20px;
 }
-.modalInternod-chat .modal-content {
+.modalChat .modal-content {
   width: 209px;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -1451,12 +1454,12 @@ textarea::placeholder {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
 }
-.modalInternod-chat .modal-content p {
+.modalChat .modal-content p {
   margin-bottom: 12px;
   cursor: pointer;
   color: #9DA5AC;
 }
-.modalInternod-chat .modal-content p:hover {
+.modalChat .modal-content p:hover {
   text-decoration: underline;
 }
 
@@ -1472,12 +1475,15 @@ textarea::placeholder {
 
 .modalEdit-contact {
   display: none;
-  position: fixed;
-  left: 215px;
-  top: 27px;
+  position: absolute;
+  top: 40px;
+  right: 20px;
   width: 212px;
   height: 269px;
   background-color: #232D36;
+  color: #D3DAE0;
+  font-size: 1.8rem;
+  border-radius: 20px;
 }
 .modalEdit-contact .modal-content {
   position: absolute;
