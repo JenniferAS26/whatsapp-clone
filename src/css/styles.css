@@ -1166,4 +1166,191 @@ input[type=number]:focus::-webkit-inner-spin-button, input[type=number]:hover::-
   line-height: 1;
 }
 
+.modal-signin-container {
+  display: none;
+  width: 331px;
+  height: 290px;
+  top: 269px;
+  left: 40px;
+  border-radius: 4px;
+  background-color: #232D36;
+}
+.modal-signin-container h2 {
+  font-family: "PT Sans", sans-serif;
+  color: #D3DAE0;
+}
+
+#modal-signin-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #189C87;
+  background-color: #232D36;
+}
+#modal-signin-form .form__input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #189C87;
+  border-radius: 4px;
+  font-size: 14px;
+}
+#modal-signin-form .form__input::placeholder {
+  color: #aaa;
+}
+#modal-signin-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #189C87;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+#modal-signin-form button:hover {
+  background-color: #189C87;
+}
+
+.modal-signup-container {
+  width: 331px;
+  height: 290px;
+  padding: 20px;
+  border: 1px solid #189C87;
+  background-color: #232D36;
+  margin: 20px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.modal-signup-container h2 {
+  text-align: center;
+  color: #9DA5AC;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.modal-signup-container .signup-form .modal__signup {
+  display: flex;
+  flex-direction: column;
+}
+.modal-signup-container .signup-form .modal__signup input, .modal-signup-container .signup-form .modal__signup textarea, .modal-signup-container .signup-form .modal__signup button {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #189C87;
+  border-radius: 4px;
+}
+.modal-signup-container .signup-form .modal__signup textarea {
+  height: 100px;
+  resize: vertical;
+}
+.modal-signup-container .signup-form .modal__signup button {
+  background-color: #189C87;
+  color: #189C87;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.modal-signup-container .signup-form .modal__signup button:hover {
+  background-color: #189C87;
+}
+
+.chat-menu-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.chat-menu-icon:hover {
+  opacity: 0.7;
+}
+
+.modalInternod-chat {
+  display: none;
+  position: fixed;
+  left: 215px;
+  top: 27px;
+  width: 212px;
+  height: 269px;
+  background-color: #232D36;
+}
+.modalInternod-chat .modal-content {
+  width: 209px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: #232D36;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+.modalInternod-chat .modal-content p {
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: #9DA5AC;
+}
+.modalInternod-chat .modal-content p:hover {
+  text-decoration: underline;
+}
+
+.contact-menu-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.contact-menu-icon:hover {
+  opacity: 0.7;
+}
+
+.modalInfo-3puntos {
+  display: none;
+  position: fixed;
+  left: 215px;
+  top: 27px;
+  width: 212px;
+  height: 269px;
+  background-color: #232D36;
+}
+.modalInfo-3puntos .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 300px;
+  padding: 20px;
+  background-color: #232D36;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+.modalInfo-3puntos .modal-content p {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #FFFFFD;
+}
+.modalInfo-3puntos .modal-content p:hover {
+  text-decoration: underline;
+}
+
+.modalInfo-3puntos {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modalInfo-3puntos .modal-content {
+  position: relative;
+  margin: 20% auto;
+  padding: 20px;
+  width: 50%;
+  background-color: #fff;
+}
+.modalInfo-3puntos .close-btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */
