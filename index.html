@@ -34,6 +34,7 @@
         <span class="signup-redirect">Sign up for free</span>
       </div>
       <div class="signin-container__signup-container">
+<<<<<<< HEAD
        
     <div class="modal-signup-container" id="modal-signup-container">
       <h2>Create an account</h2>
@@ -48,6 +49,35 @@
           </div>
       </form>
     <!-- </div> <h1>pending...</h1> -->
+=======
+        <button class="signup-back">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <h2 class="signin-container__signup-container--title">Create an account</h2>
+        <form class="signin-container__signup-container--form form">
+          <div class="profile-picture-wrapper">
+            <div class="form__profile-picture">
+              <figure class="form__profile-picture--image-container" name="avatar">
+                <img class="current-picture" src="./src/assets/images/user-silhouette.jpg" alt="dummy image">
+              </figure>
+              <div class="form__profile-picture--input-container">
+                <label for="input-url"><span>Choose a file</span> or drag it here.</label>
+                <input type="file" id="input-url" class="singup-input-image" accept="image/*" value="profile-photo">
+              </div>
+            </div>
+          </div>
+          <div class="form__input-wrapper">
+            <input class="form__input singup-name-input" type="text" placeholder="Enter your name">
+            <div class="form__input--error error"></div>
+            <input class="form__input singup-number-input" type="number" placeholder="Enter your phone number">
+            <div class="form__input--error error"></div>
+            <input class="form__input singup-password-input" type="password" placeholder="Enter your password">
+            <div class="form__input--error error"></div>
+            <textarea class="form__textarea singup-quote-textarea" cols="30" rows="10" placeholder="Write a quote"></textarea>
+          </div>
+          <input class="form__submit" type="submit" value="Sign up">
+        </form>
+>>>>>>> main
       </div>
     
     </section>
@@ -57,7 +87,7 @@
           <h4 class="title">WhatsApp</h4>
           <div class="icons">
             <img src="./src/assets/icons/search.png" alt="search icon">
-            <img src="./src/assets/icons/menu-vertical.png" alt="menu icon">
+            <img class="home-menu-icon" src="./src/assets/icons/menu-vertical.png" alt="menu icon">
           </div>
         </div>
         <div class="home-container__header--bottom home-header">
@@ -71,62 +101,13 @@
       </div>
       <div class="home-container__main">
         <div class="home-container__main--cards-container">
-          <div class="card">
+          <!-- <div class="card">
             <div class="profile-container">
               <img class="profile-container__image" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
               <p class="profile-container__title">Jane Doe</p>
             </div>
             <span class="connection">7:30pm</span>
-          </div>
-          <div class="card">
-            <div class="profile-container">
-              <img class="profile-container__image" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
-              <p class="profile-container__title">Jane Doe</p>
-            </div>
-            <span class="connection">7:30pm</span>
-          </div>
-          <div class="card">
-            <div class="profile-container">
-              <img class="profile-container__image" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
-              <p class="profile-container__title">Jane Doe</p>
-            </div>
-            <span class="connection">7:30pm</span>
-          </div>
-          <div class="card">
-            <div class="profile-container">
-              <img class="profile-container__image" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
-              <p class="profile-container__title">Jane Doe</p>
-            </div>
-            <span class="connection">7:30pm</span>
-          </div>
-          <div class="card">
-            <div class="profile-container">
-              <img class="profile-container__image" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
-              <p class="profile-container__title">Jane Doe</p>
-            </div>
-            <span class="connection">7:30pm</span>
-          </div>
-          <div class="card">
-            <div class="profile-container">
-              <img class="profile-container__image" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
-              <p class="profile-container__title">Jane Doe</p>
-            </div>
-            <span class="connection">7:30pm</span>
-          </div>
-          <div class="card">
-            <div class="profile-container">
-              <img class="profile-container__image" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
-              <p class="profile-container__title">Jane Doe</p>
-            </div>
-            <span class="connection">7:30pm</span>
-          </div>
-          <div class="card">
-            <div class="profile-container">
-              <img class="profile-container__image" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
-              <p class="profile-container__title">Jane Doe</p>
-            </div>
-            <span class="connection">7:30pm</span>
-          </div>
+          </div> -->
           <button class="message-button">
             <img src="./src/assets/icons/message.png" alt="message icon">
           </button>
@@ -371,7 +352,7 @@
       </div>
     </section>
     <section class="chats-container">
-      <div class="chats-container__header">
+      <!-- <div class="chats-container__header">
         <div class="chats-container__header--left">
           <img class="arrow-back" src="./src/assets/icons/back-grey.png" alt="arrow icon">
           <div class="contact-info">
@@ -398,7 +379,7 @@
           </div>
           <img class="microphone-icon" src="./src/assets/icons/voice-note.png" alt="microphone icon">
         </div>
-      </div>
+      </div> -->
     </section>
     <section class="take-a-picture-container">
       <div class="take-a-picture-container__top">
@@ -462,7 +443,7 @@
       </div>
     </section>
     <section class="contact-info-container">
-      <div class="contact-info-container__top">
+      <!-- <div class="contact-info-container__top">
         <img class="arrow-back-icon" src="./src/assets/icons/back.png" alt="back arrow icon">
         <div class="contact-info-container__top--info contact">
           <img class="contact__photo" src="./src/assets/images/profile-pic2.jpg" alt="profile picture">
@@ -528,11 +509,11 @@
       </div>
       <div class="contact-info-container__encryption">
         <div class="contact-info-container__encryption--items">
-          <i class="fa-solid fa-lock"></i>
+          <button class="delete-button">
+            <i class="fa-solid fa-trash"></i>
+          </button>
           <div class="description-wrapper">
-            <p>Encryption</p>
-            <span>Messages and calls are end-to-end encrypted.</span>
-            <span>Tap to verify</span>
+            <p>Delete</p>
           </div>
         </div>
         <div class="contact-info-container__encryption--items">
@@ -548,7 +529,7 @@
             <p>Chat lock</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <!-- <button id="openModal">Abrir Modal</button> -->
@@ -605,6 +586,22 @@
 
 
   <script src="./src/scripts/navigation.js"></script>
+    <div class="edit-contact">
+      <div class="edit-contact__options">
+        <p>Share</p>
+        <p>Edit</p>
+        <p>View in address bock</p>
+        <p>Verify security code</p>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="./src/scripts/resources/redirectFunctions.js"></script>
+  <script type="module" src="./src/scripts/navigation.js"></script>
+  <script type="module" src="./src/scripts/accounts/readAccounts.js"></script>
+  <script type="module" src="./src/scripts/accounts/createAccount.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://kit.fontawesome.com/4825aba800.js" crossorigin="anonymous"></script>
   <script src="./src/scripts/signin.js"></script>
   <script src="./src/scripts/signup.js"></script>

@@ -33,6 +33,7 @@ a {
   height: 823px;
   background-color: #101D24;
   margin: auto;
+  position: relative;
 }
 
 .signin-container {
@@ -105,7 +106,7 @@ a {
   grid-template-rows: 70px 1fr;
   position: relative;
 }
-.signin-container__auth-container--title {
+.signin-container__auth-container--title, .signin-container__signup-container--title {
   font-size: 2.4rem;
   text-align: center;
   letter-spacing: 1px;
@@ -170,12 +171,132 @@ a {
   width: 100%;
   height: 100%;
   display: none;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 40px 1fr;
   position: relative;
+}
+.signin-container__signup-container .signup-back {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  text-transform: lowercase;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #D3DAE0;
+  background-color: transparent;
+}
+.signin-container__signup-container .form {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.signin-container__signup-container .form .profile-picture-wrapper {
+  width: 320px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px dashed rgba(24, 156, 135, 0.3);
+}
+.signin-container__signup-container .form__profile-picture {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 10px;
+  display: grid;
+}
+.signin-container__signup-container .form__profile-picture--image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signin-container__signup-container .form__profile-picture--image-container img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.signin-container__signup-container .form__profile-picture--input-container {
+  width: 100%;
+  height: 100%;
+}
+.signin-container__signup-container .form__profile-picture--input-container label {
+  font-size: 1.4rem;
+  color: #189C87;
+  display: block;
+  margin: 15px 0;
+  text-align: center;
+}
+.signin-container__signup-container .form__profile-picture--input-container label span {
+  font-weight: 700;
+  color: #189C87;
+}
+.signin-container__signup-container .form__profile-picture .singup-input-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+.signin-container__signup-container .form__input-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 70px 20px 70px 20px;
+}
+.signin-container__signup-container .form__input, .signin-container__signup-container .form__textarea {
+  padding: 5px 25px;
+  width: 260px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #189C87;
+  color: #D3DAE0;
+  font-size: 1.7rem;
+}
+.signin-container__signup-container .form__input::placeholder, .signin-container__signup-container .form__textarea::placeholder {
+  color: #9DA5AC;
+}
+.signin-container__signup-container .form__input:focus, .signin-container__signup-container .form__textarea:focus {
+  border: none;
+  outline: none;
+  border-bottom: 4px solid #189C87;
+}
+.signin-container__signup-container .form__submit {
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #101D24;
+  background-color: #189C87;
+  align-self: flex-end;
 }
 
 input[type=number]:focus::-webkit-inner-spin-button, input[type=number]:hover::-webkit-inner-spin-button {
   display: none; /* para retirar el scroll */
+}
+
+textarea {
+  overflow: hidden;
+  font-family: "PT Sans", sans-serif;
+}
+textarea::placeholder {
+  font-family: "PT Sans", sans-serif;
 }
 
 .home-container {
@@ -1165,6 +1286,21 @@ input[type=number]:focus::-webkit-inner-spin-button, input[type=number]:hover::-
   color: #868F94;
   line-height: 1;
 }
+.contact-info-container__encryption--items .delete-button {
+  cursor: pointer;
+  width: 20px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  text-transform: lowercase;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #de2d4e;
+  background-color: transparent;
+}
+.contact-info-container__encryption--items .delete-button i {
+  color: inherit;
+}
 
 .modal-signin-container {
   display: none;
@@ -1351,6 +1487,19 @@ input[type=number]:focus::-webkit-inner-spin-button, input[type=number]:hover::-
   top: 0;
   right: 10px;
   cursor: pointer;
+}
+
+.edit-contact {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 212px;
+  height: 269px;
+  background-color: #232D36;
+  color: #D3DAE0;
+  font-size: 1.8rem;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

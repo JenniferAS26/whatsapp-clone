@@ -3,9 +3,9 @@
     {
       "id": 1,
       "name": "Kate Pierse",
-      "cellphone-number": 3256984565,
+      "cellphone_number": 3256984565,
       "password": 147856,
-      "url-image": "",
+      "url_image": "",
       "online": true,
       "quote": "",
       "date": ""

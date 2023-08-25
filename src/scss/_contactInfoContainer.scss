@@ -146,6 +146,13 @@ $auxiliar-color: #18252D;
           line-height: 1;
         }
       }
+      .delete-button {
+        @include buttonStyle(20px, 30px, 50%, lowercase, 1.8rem, #de2d4e, transparent);
+        i {
+          color: inherit;
+        }
+      }
     }
   }
 }
+
