@@ -237,7 +237,7 @@ a {
   font-weight: 700;
   color: #189C87;
 }
-.signin-container__signup-container .form__profile-picture .input-image {
+.signin-container__signup-container .form__profile-picture .singup-input-image {
   position: absolute;
   left: 0;
   top: 0;
@@ -292,6 +292,7 @@ input[type=number]:focus::-webkit-inner-spin-button, input[type=number]:hover::-
 
 textarea {
   overflow: hidden;
+  font-family: "PT Sans", sans-serif;
 }
 textarea::placeholder {
   font-family: "PT Sans", sans-serif;
@@ -1283,6 +1284,21 @@ textarea::placeholder {
   font-size: 1.3rem;
   color: #868F94;
   line-height: 1;
+}
+.contact-info-container__encryption--items .delete-button {
+  cursor: pointer;
+  width: 20px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  text-transform: lowercase;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #de2d4e;
+  background-color: transparent;
+}
+.contact-info-container__encryption--items .delete-button i {
+  color: inherit;
 }
 
 /*# sourceMappingURL=styles.css.map */
