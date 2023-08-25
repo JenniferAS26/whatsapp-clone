@@ -154,7 +154,7 @@ $links-color: rgb(101, 202, 241);
             }
           }
         }
-        .input-image {
+        .singup-input-image {
           position: absolute;
           left: 0;
           top: 0;
@@ -194,6 +194,7 @@ input[type="number"] {
 
 textarea {
   overflow: hidden;
+  font-family: $font-source;
   &::placeholder {
     font-family: $font-source;
   }

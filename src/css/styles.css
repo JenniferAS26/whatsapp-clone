@@ -237,7 +237,7 @@ a {
   font-weight: 700;
   color: #189C87;
 }
-.signin-container__signup-container .form__profile-picture .input-image {
+.signin-container__signup-container .form__profile-picture .singup-input-image {
   position: absolute;
   left: 0;
   top: 0;
@@ -292,6 +292,7 @@ input[type=number]:focus::-webkit-inner-spin-button, input[type=number]:hover::-
 
 textarea {
   overflow: hidden;
+  font-family: "PT Sans", sans-serif;
 }
 textarea::placeholder {
   font-family: "PT Sans", sans-serif;
