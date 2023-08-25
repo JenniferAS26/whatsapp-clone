@@ -16,7 +16,7 @@ export const contactInfoContainer = document.querySelector('.contact-info-contai
 const singupRedirect = document.querySelector('.signup-redirect')
 // const cardChat = document.querySelectorAll('.card')
 const videoRecordCounter = document.querySelector('.video-counter')
-const contactInfo = document.querySelector('.contact-info')
+// export const contactInfo = document.querySelector('.contact-info')
 const menuChatContainerIcon = document.querySelector('.chat-menu-icon')
 const backContactInfoIcon = document.querySelector('.arrow-back-icon')
 const menuContactInfoIcon = document.querySelector('.contact-menu-icon')
@@ -150,13 +150,13 @@ takePhotoButton.addEventListener('click', () => {
 
 // contactInfo...
 
-backContactInfoIcon.addEventListener('click', () => {
-  contactInfoContainer.style.display = 'none'
-  chatContainer.style.display = 'block'
-})
+// backContactInfoIcon.addEventListener('click', () => {
+//   contactInfoContainer.style.display = 'none'
+//   chatContainer.style.display = 'block'
+// })
 
-menuContactInfoIcon.addEventListener('click', () => {
-  console.log('click para abrir el modal :)');
-})
+// menuContactInfoIcon.addEventListener('click', () => {
+//   console.log('click para abrir el modal :)');
+// })
 
 // menuChatContainerIcon
