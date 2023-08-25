@@ -10,6 +10,7 @@ export const chatContainer = document.querySelector('.chats-container')
 const takeAPictureContainer = document.querySelector('.take-a-picture-container')
 const sendPictureContainer = document.querySelector('.send-picture-container')
 export const contactInfoContainer = document.querySelector('.contact-info-container')
+const modalEditContactInfo = document.querySelector('.edit-contact')
 
  
 /** Other elements */
@@ -44,6 +45,7 @@ const takePhotoOptionButton = document.querySelector('.take-foto-option')
 /** Clickable icons  */
 const arrowBackChatContainerIcon = document.querySelector('.arrow-back')
 const cameraIcons = document.querySelectorAll('.camera-icon')
+const menuHomeIcon = document.querySelector('.home-menu-icon')
 
 /** Events */
 agreeButton.addEventListener('click', () => {
@@ -160,3 +162,7 @@ takePhotoButton.addEventListener('click', () => {
 // })
 
 // menuChatContainerIcon
+
+menuHomeIcon.addEventListener('click', () => {
+  modalEditContactInfo.style.display = 'block'
+})
