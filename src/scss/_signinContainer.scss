@@ -3,7 +3,6 @@
 
 $links-color: rgb(101, 202, 241);
 
-
 .signin-container {
   @include containerStyle(100%, 100%, 40px, 25px);
   &__welcome-container {
@@ -74,7 +73,7 @@ $links-color: rgb(101, 202, 241);
           position: relative;
           .input-label {
             position: absolute;
-            top: 0;
+            top: -8px;
             left: 0;
             transform: translate(10px, 10px);
             transform-origin: left;
@@ -87,12 +86,12 @@ $links-color: rgb(101, 202, 241);
       }
       &__input {
         @include inputStyle(
-          260px, 40px, transparent, $primary-text-color, 
-          $tertiary-color, 1.7rem, $tertiary-color
+          260px, 30px, transparent, $primary-text-color, 
+          $light-color, 1.7rem, $tertiary-color
         );
         &:focus-visible ~ .input-label,
         &:valid ~ .input-label {
-            transform: translate(0, -20px) scale(0.8) !important;
+            transform: translate(0, -25px) scale(0.8) !important;
             color: $tertiary-color;
         }
       }
@@ -191,7 +190,7 @@ $links-color: rgb(101, 202, 241);
           position: relative;
           .input-label {
             position: absolute;
-            top: 0;
+            top: -6px;
             left: 0;
             transform: translate(10px, 10px);
             transform-origin: left;
@@ -204,13 +203,13 @@ $links-color: rgb(101, 202, 241);
       }
       &__input {
         @include inputStyle(
-          260px, 40px, transparent, $primary-text-color, 
-          $tertiary-color, 1.7rem, $tertiary-color
+          260px, 30px, transparent, $primary-text-color, 
+          $light-color, 1.7rem, $tertiary-color
         );
-        &:focus-visible ~ .input-label,
+        &:focus-within ~ .input-label,
         &:valid ~ .input-label {
-            transform: translate(0, -20px) scale(0.8) !important;
-            color: $tertiary-color;
+            transform: translate(0, -25px) scale(0.8);
+            // color: $tertiary-color;
         }
       }
       &__submit {
@@ -239,3 +238,6 @@ textarea {
   }
 }
 
+.change-label-color {
+  color: $tertiary-color !important;
+}

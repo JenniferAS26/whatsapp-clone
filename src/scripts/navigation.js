@@ -10,6 +10,7 @@ export const chatContainer = document.querySelector('.chats-container')
 const takeAPictureContainer = document.querySelector('.take-a-picture-container')
 const sendPictureContainer = document.querySelector('.send-picture-container')
 export const contactInfoContainer = document.querySelector('.contact-info-container')
+export const editContactInfoContainer = document.querySelector('.edit-contact-container')
 const modalEditContactInfo = document.querySelector('.edit-contact')
 
  
@@ -21,6 +22,8 @@ const videoRecordCounter = document.querySelector('.video-counter')
 const menuChatContainerIcon = document.querySelector('.chat-menu-icon')
 const backContactInfoIcon = document.querySelector('.arrow-back-icon')
 const menuContactInfoIcon = document.querySelector('.contact-menu-icon')
+const labels = document.querySelectorAll('.input-label')
+const inputs = document.querySelectorAll('.form__input')
 
 /** Forms and Inputs */
 const signinForm = document.querySelector('.signin-container__auth-container--form')
@@ -46,6 +49,7 @@ const takePhotoOptionButton = document.querySelector('.take-foto-option')
 const arrowBackChatContainerIcon = document.querySelector('.arrow-back')
 const cameraIcons = document.querySelectorAll('.camera-icon')
 const menuHomeIcon = document.querySelector('.home-menu-icon')
+const backEditContactIcon = document.querySelector('.edit-contact-container__header--back-icon')
 
 /** Events */
 agreeButton.addEventListener('click', () => {
@@ -150,12 +154,6 @@ takePhotoButton.addEventListener('click', () => {
   sendPictureContainer.style.display = 'block'
 })
 
-// contactInfo...
-
-// backContactInfoIcon.addEventListener('click', () => {
-//   contactInfoContainer.style.display = 'none'
-//   chatContainer.style.display = 'block'
-// })
 
 // menuContactInfoIcon.addEventListener('click', () => {
 //   console.log('click para abrir el modal :)');
@@ -166,3 +164,18 @@ takePhotoButton.addEventListener('click', () => {
 menuHomeIcon.addEventListener('click', () => {
   modalEditContactInfo.classList.toggle('hidden-modal')
 })
+
+// const labelsArray = [...labels]
+
+inputs.forEach(input => {
+  input.addEventListener('select', () => {
+    labels.forEach(label => {
+      label.classList.toggle('change-label-color')
+    })
+  })
+})
+
+// backEditContactIcon.addEventListener('click', () => {
+//   editContactInfoContainer.style.display = 'block'
+//   contactInfoContainer.style.display = 'grid'
+// })

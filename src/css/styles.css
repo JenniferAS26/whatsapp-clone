@@ -135,7 +135,7 @@ a {
 }
 .signin-container__auth-container .form__input-wrapper .input-container .input-label {
   position: absolute;
-  top: 0;
+  top: -8px;
   left: 0;
   transform: translate(10px, 10px);
   transform-origin: left;
@@ -145,13 +145,13 @@ a {
   color: #9DA5AC;
 }
 .signin-container__auth-container .form__input {
-  padding: 5px 25px;
+  padding: 5px;
   width: 260px;
-  height: 40px;
+  height: 30px;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #9DA5AC;
-  color: #189C87;
+  color: #FFFFFD;
   font-size: 1.7rem;
 }
 .signin-container__auth-container .form__input:focus {
@@ -160,7 +160,7 @@ a {
   border-bottom: 2px solid #189C87;
 }
 .signin-container__auth-container .form__input:focus-visible ~ .input-label, .signin-container__auth-container .form__input:valid ~ .input-label {
-  transform: translate(0, -20px) scale(0.8) !important;
+  transform: translate(0, -25px) scale(0.8) !important;
   color: #189C87;
 }
 .signin-container__auth-container .form__button {
@@ -279,7 +279,7 @@ a {
 }
 .signin-container__signup-container .form__input-wrapper .input-container .input-label {
   position: absolute;
-  top: 0;
+  top: -6px;
   left: 0;
   transform: translate(10px, 10px);
   transform-origin: left;
@@ -289,13 +289,13 @@ a {
   color: #9DA5AC;
 }
 .signin-container__signup-container .form__input {
-  padding: 5px 25px;
+  padding: 5px;
   width: 260px;
-  height: 40px;
+  height: 30px;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #9DA5AC;
-  color: #189C87;
+  color: #FFFFFD;
   font-size: 1.7rem;
 }
 .signin-container__signup-container .form__input:focus {
@@ -303,9 +303,8 @@ a {
   outline: none;
   border-bottom: 2px solid #189C87;
 }
-.signin-container__signup-container .form__input:focus-visible ~ .input-label, .signin-container__signup-container .form__input:valid ~ .input-label {
-  transform: translate(0, -20px) scale(0.8) !important;
-  color: #189C87;
+.signin-container__signup-container .form__input:focus-within ~ .input-label, .signin-container__signup-container .form__input:valid ~ .input-label {
+  transform: translate(0, -25px) scale(0.8);
 }
 .signin-container__signup-container .form__submit {
   cursor: pointer;
@@ -331,6 +330,10 @@ textarea {
 }
 textarea::placeholder {
   font-family: "PT Sans", sans-serif;
+}
+
+.change-label-color {
+  color: #189C87 !important;
 }
 
 .home-container {
@@ -852,9 +855,10 @@ textarea::placeholder {
   left: 0;
   width: 100%;
   height: 43px;
+  padding-left: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .chats-container__main--bottom-container .emojis {
@@ -868,8 +872,8 @@ textarea::placeholder {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
 }
-.chats-container__main--bottom-container .input {
-  padding: 5px 25px;
+.chats-container__main--bottom-container .input-message {
+  padding: 5px;
   width: 220px;
   height: inherit;
   background-color: #2D383E;
@@ -879,10 +883,13 @@ textarea::placeholder {
   font-size: 1.8rem;
   padding: 5px 10px;
 }
-.chats-container__main--bottom-container .input:focus {
+.chats-container__main--bottom-container .input-message:focus {
   border: none;
   outline: none;
   border-bottom: 2px solid #707980;
+}
+.chats-container__main--bottom-container .input-message:focus {
+  border-bottom: none;
 }
 .chats-container__main--bottom-container .icons {
   width: 70px;
@@ -899,8 +906,23 @@ textarea::placeholder {
 .chats-container__main--bottom-container .icons .camera-icon {
   padding-right: 15px;
 }
-.chats-container__main--bottom-container .microphone-icon {
-  padding-left: 10px;
+.chats-container__main--bottom-container .send-message-button {
+  cursor: pointer;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: none;
+  text-transform: lowercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #FFFFFD;
+  background-color: transparent;
+}
+.chats-container__main--bottom-container .send-message-button .send-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 43px;
+  height: 43px;
 }
 
 .smiley-face,
@@ -1331,6 +1353,110 @@ textarea::placeholder {
 }
 .contact-info-container__encryption--items .delete-button i {
   color: inherit;
+}
+
+.edit-contact-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 0;
+  display: none;
+  grid-template-rows: 50px 1fr;
+}
+.edit-contact-container__header {
+  width: 100%;
+  height: 100%;
+  background-color: #232D36;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.edit-contact-container__header--title {
+  padding-left: 20px;
+  font-size: 2rem;
+  text-align: left;
+  letter-spacing: 1px;
+  color: #D3DAE0;
+}
+.edit-contact-container .form {
+  width: 100%;
+  height: 100%;
+  padding: 10px 30px;
+  display: grid;
+  grid-template-rows: 200px 200px 1fr;
+  justify-content: center;
+}
+.edit-contact-container .form .first-container, .edit-contact-container .form .second-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-contact-container .form .first-container .i-icons, .edit-contact-container .form .second-container .i-icons {
+  font-size: 1.6rem;
+  color: #9DA5AC;
+  padding-right: 20px;
+}
+.edit-contact-container .form .first-container .input-container, .edit-contact-container .form .second-container .input-container {
+  position: relative;
+}
+.edit-contact-container .form .first-container .input-container .input-label, .edit-contact-container .form .second-container .input-container .input-label {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  transform: translate(10px, 10px);
+  transform-origin: left;
+  transition: transform 0.25s;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  color: #9DA5AC;
+}
+.edit-contact-container .form .first-container .input-container .form__input, .edit-contact-container .form .second-container .input-container .form__input {
+  padding: 5px;
+  width: 260px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #9DA5AC;
+  color: #FFFFFD;
+  font-size: 1.7rem;
+}
+.edit-contact-container .form .first-container .input-container .form__input:focus, .edit-contact-container .form .second-container .input-container .form__input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #189C87;
+}
+.edit-contact-container .form .first-container .input-container .form__input:focus-visible ~ .input-label,
+.edit-contact-container .form .first-container .input-container .form__input:valid ~ .input-label, .edit-contact-container .form .second-container .input-container .form__input:focus-visible ~ .input-label,
+.edit-contact-container .form .second-container .input-container .form__input:valid ~ .input-label {
+  transform: translate(0, -20px) scale(0.8);
+  color: #9DA5AC;
+}
+
+.group-inputs {
+  width: 100%;
+  height: 140px;
+  display: grid;
+  align-items: end;
+}
+
+.button {
+  cursor: pointer;
+  width: 250px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #101D24;
+  background-color: #189C87;
+  justify-self: center;
+  align-self: flex-end;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

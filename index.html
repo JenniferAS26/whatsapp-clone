@@ -371,7 +371,7 @@
           <div class="emojis">
             <img class="smiley-face" src="./src/assets/icons/smiley-face.png" alt="smiley-face icon">
           </div>
-          <input class="input" type="text" placeholder="Type a message">
+          <input class="input-message" type="text" placeholder="Type a message">
           <div class="icons">
             <img class="clip-icon" src="./src/assets/icons/clip.png" alt="clip icon">
             <img class="camera-icon" src="./src/assets/icons/camera.png" alt="camera icon">
@@ -531,7 +531,33 @@
       </div> -->
     </section>
     <section class="edit-contact-container">
-
+      <div class="edit-contact-container__header">
+        <img class="edit-contact-container__header--back-icon" src="./src/assets/icons/back.png" alt="">
+        <h2 class="edit-contact-container__header--title">Edit contact</h2>
+      </div>
+      <form class="edit-contact-container__form form">
+        <div class="first-container">
+          <i class="fa-solid fa-user i-icons"></i>
+          <div class="group-inputs">
+            <div class="input-container">
+              <input id="edit-input-name" class="form__input" type="text">
+              <label class="input-label" for="edit-input-name">First name</label>
+            </div>
+            <div class="input-container">
+              <input id="edit-input-lastname" class="form__input" type="text">
+              <label class="input-label" for="edit-input-lastname">Last name</label>
+            </div>
+          </div>
+        </div>
+        <div class="second-container">
+          <i class="fa-solid fa-phone i-icons"></i>
+          <div class="input-container">
+            <input id="edit-input-phone" class="form__input"  type="text">
+            <label class="input-label" for="edit-input-phone">Phone</label>
+          </div>
+        </div>
+        <input class="form__submit button" type="submit" value="Save">
+      </form>
     </section>
     
 

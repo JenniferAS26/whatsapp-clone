@@ -57,7 +57,7 @@
 }
 
 @mixin inputStyle($width, $height, $bg-color, $border-botom-color, $color, $f-s, $focus-color) {
-  padding: 5px 25px;
+  padding: 5px;
   width: $width;
   height: $height;
   background-color: $bg-color;
