@@ -63,7 +63,8 @@ $message-text-color: #707980;
       left: 0;
       width: 100%;
       height: 43px;
-      @include flexCenter(row, center, center);
+      padding-left: 15px;
+      @include flexCenter(row, flex-start, center);
       .emojis {
         width: 40px;
         height: inherit;
@@ -72,9 +73,12 @@ $message-text-color: #707980;
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
       }
-      .input {
+      .input-message {
         @include inputStyle(220px, inherit, $message-bg-color, none, $message-text-color, 1.8rem, $message-text-color);
         padding: 5px 10px;
+        &:focus {
+          border-bottom: none;
+        }
       }
       .icons {
         width: 70px;
@@ -84,13 +88,18 @@ $message-text-color: #707980;
         column-gap: 15px;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
-        
         .camera-icon {
           padding-right: 15px;
         }
       }
-      .microphone-icon {
-        padding-left: 10px;
+      .send-message-button {
+        @include buttonStyle(43px, 43px, 50%, lowercase, 1.4rem, $light-color, transparent);
+        .send-icon {
+          cursor: pointer;
+          margin-left: 10px;
+          width: 43px;
+          height: 43px;
+        }
       }
     }
   }

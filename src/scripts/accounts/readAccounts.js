@@ -1,6 +1,6 @@
 import { readData, deleteData } from "../services/api.js";
 import { getUserById } from "./getUserById.js";
-import { homeContainer, chatContainer, contactInfoContainer } from "../navigation.js";
+import { homeContainer, chatContainer, contactInfoContainer, editContactInfoContainer } from "../navigation.js";
 
 const registeredAccounts = await readData('users')
 
@@ -42,19 +42,31 @@ const createChatTemplate = async (id, chatContainer) => {
   </div>
   <div class="chats-container__main">
     <div class="chats-container__main--wallpaper-container"></div>
-    <div class="chats-container__main--bottom-container">
+    <form class="chats-container__main--bottom-container">
       <div class="emojis">
       <img class="smiley-face" src="./src/assets/icons/smiley-face.png" alt="smiley-face icon">
       </div>
-      <input class="input" type="text" placeholder="Type a message">
+      <input class="input-message" type="text" placeholder="Type a message">
       <div class="icons">
         <img class="clip-icon" src="./src/assets/icons/clip.png" alt="clip icon">
         <img class="camera-icon" src="./src/assets/icons/camera.png" alt="camera icon">
       </div>
-      <img class="microphone-icon" src="./src/assets/icons/voice-note.png" alt="microphone icon">
-    </div>
+      <button class="send-message-button">
+        <img class="send-icon" src="./src/assets/icons/voice-note.png" alt="microphone icon">
+      </button>
+    </form>
   </div>
   `
+  const inputMessage = document.querySelector('.input-message')
+  const sendIcon = document.querySelector('.send-icon')
+  inputMessage.addEventListener('input', () => {
+    if (inputMessage.value !== '') {
+      sendIcon.src = './src/assets/icons/send.png'
+    } else {
+      sendIcon.src = './src/assets/icons/voice-note.png'
+    }
+  })
+
   const contactInfo = document.querySelector('.contact-info')
   contactInfo.addEventListener('click', () => {
     createInfoContactTemplate(contactInfo.id)
@@ -79,7 +91,7 @@ export const createInfoContactTemplate = async (id) => {
   const user = await getUserById(id)
   contactInfoContainer.innerHTML = `
     <div class="contact-info-container__top">
-      <img class="arrow-back-icon" src="./src/assets/icons/back.png" alt="back arrow icon">
+      <img class="arrow-back-icon" src="./src/assets/icons/back.png" alt="back arrow icon" onclick="goBack(contactInfoContainer, chatContainer)">
       <div class="contact-info-container__top--info contact">
         <img class="contact__photo" src="${user.url_image}" alt="profile picture">
         <h3 class="contact__name">${user.name}</h3>
@@ -166,6 +178,18 @@ export const createInfoContactTemplate = async (id) => {
       </div>
     </div>
   `
+  const contactMenuIcon = document.querySelector('.contact-menu-icon')
+  contactMenuIcon.addEventListener('click', () => {
+    contactInfoContainer.style.display = 'none'
+    editContactInfoContainer.style.display = 'grid'
+  })
+
+  const backEditContactIcon = document.querySelector('.edit-contact-container__header--back-icon')
+  backEditContactIcon.addEventListener('click', () => {
+    editContactInfoContainer.style.display = 'block'
+    contactInfoContainer.style.display = 'grid'
+  })
+
   const deleteButton = document.querySelector('.delete-button')
   deleteButton.addEventListener('click', () => {
     deleteData('users', id)

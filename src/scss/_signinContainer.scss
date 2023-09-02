@@ -3,7 +3,6 @@
 
 $links-color: rgb(101, 202, 241);
 
-
 .signin-container {
   @include containerStyle(100%, 100%, 40px, 25px);
   &__welcome-container {
@@ -69,13 +68,32 @@ $links-color: rgb(101, 202, 241);
       @include formStyle;
       &__input-wrapper {
         @include inputWrapper;
-        grid-template-rows: 70px 20px 70px 20px;
+        grid-template-rows: repeat(2, 95px);
+        .input-container {
+          position: relative;
+          .input-label {
+            position: absolute;
+            top: -8px;
+            left: 0;
+            transform: translate(10px, 10px);
+            transform-origin: left;
+            transition: transform 0.25s;
+            font-size: 1.7rem;
+            letter-spacing: 1px;
+            color: $primary-text-color;
+          }
+        }
       }
       &__input {
         @include inputStyle(
-          260px, 50px, transparent, $tertiary-color, 
-          $secondary-text-color, 1.7rem, $primary-text-color
+          260px, 30px, transparent, $primary-text-color, 
+          $light-color, 1.7rem, $tertiary-color
         );
+        &:focus-visible ~ .input-label,
+        &:valid ~ .input-label {
+            transform: translate(0, -25px) scale(0.8) !important;
+            color: $tertiary-color;
+        }
       }
       &__button {
         @include buttonStyle(
@@ -166,13 +184,33 @@ $links-color: rgb(101, 202, 241);
       }
       &__input-wrapper {
         @include inputWrapper;
-        grid-template-rows: 70px 20px 70px 20px;
+        align-items: end;
+        grid-template-rows: repeat(4, 90px);
+        .input-container {
+          position: relative;
+          .input-label {
+            position: absolute;
+            top: -6px;
+            left: 0;
+            transform: translate(10px, 10px);
+            transform-origin: left;
+            transition: transform 0.25s;
+            font-size: 1.7rem;
+            letter-spacing: 1px;
+            color: $primary-text-color;
+          }
+        }
       }
-      &__input, &__textarea {
+      &__input {
         @include inputStyle(
-          260px, 50px, transparent, $tertiary-color, 
-          $secondary-text-color, 1.7rem, $primary-text-color
+          260px, 30px, transparent, $primary-text-color, 
+          $light-color, 1.7rem, $tertiary-color
         );
+        &:focus-within ~ .input-label,
+        &:valid ~ .input-label {
+            transform: translate(0, -25px) scale(0.8);
+            // color: $tertiary-color;
+        }
       }
       &__submit {
         @include buttonStyle(
@@ -200,3 +238,6 @@ textarea {
   }
 }
 
+.change-label-color {
+  color: $tertiary-color !important;
+}
